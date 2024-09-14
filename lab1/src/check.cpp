@@ -4,7 +4,6 @@
 bool Check(std::string s){
     int counter = 0;
     if (s.size() > 100){
-        std::cout << " String too long" << std::endl;
         return false;
     }
     for (int i = 0; i < s.length(); i++){

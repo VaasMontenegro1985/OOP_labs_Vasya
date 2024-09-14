@@ -45,9 +45,9 @@ TEST(test_06, basic_test_set)
 
 TEST(test_07, basic_test_set)
 {
-    std::string s = "((()()()))";
+    std::string s = "(((()()))";
     bool result = Check(s);
-    ASSERT_TRUE(result == true);
+    ASSERT_TRUE(result == false);
 }
 
 TEST(test_08, basic_test_set)
@@ -59,7 +59,27 @@ TEST(test_08, basic_test_set)
 
 TEST(test_09, basic_test_set)
 {
-    std::string s = "((()((((((((((((((((((((()((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))()))";
+    std::string s = "((()((((((((((()))))))))))))))()))";
+    bool result = Check(s);
+    ASSERT_TRUE(result == false);
+}
+
+TEST(test_10, basic_test_set)
+{
+    std::string s = ")(()))";
+    bool result = Check(s);
+    ASSERT_TRUE(result == false);
+}
+
+TEST(test_11, basic_test_set)
+{
+    std::string s = "(())((()())())";
+    bool result = Check(s);
+    ASSERT_TRUE(result == true);
+}
+TEST(test_12, basic_test_set)
+{
+    std::string s = "(";
     bool result = Check(s);
     ASSERT_TRUE(result == false);
 }

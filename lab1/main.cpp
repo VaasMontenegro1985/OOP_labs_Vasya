@@ -7,6 +7,6 @@ int main(){
     std::cout << "Input your string:" << std::endl;
     getline(std::cin, brackets);
     bool answer = Check(brackets);
-    if (answer)std::cout << "true" << std::endl;
+    if (answer) std::cout << "true" << std::endl;
     else std::cout << "false" << std::endl;
 }
