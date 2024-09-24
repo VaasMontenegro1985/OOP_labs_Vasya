@@ -3,7 +3,6 @@
 #include "../include/Octal.h"
 #include <stdexcept>
 
-
 unsigned char validateDigit(unsigned char digit)
 {
     if (digit < '0' || digit > '7')
@@ -11,9 +10,11 @@ unsigned char validateDigit(unsigned char digit)
     return digit;
 }
 
-std::ostream& operator<< (std::ostream& os, const Octal &number) { 
-    for (int i = number.size - 1; i >= 0; i--) os << number.digits[i]; 
-    return os; 
+std::ostream &operator<<(std::ostream &os, const Octal &number)
+{
+    for (int i = number.size - 1; i >= 0; i--)
+        os << number.digits[i];
+    return os;
 };
 
 void Octal::removeZeros()
@@ -46,6 +47,8 @@ Octal::Octal() : size{1}, digits{new unsigned char[1]}
 
 Octal::Octal(const size_t &lenghtOfNumber, unsigned char defaultValue)
 {
+    if (lenghtOfNumber <= 0)
+        throw std::invalid_argument("Invalid size");
     validateDigit(defaultValue);
     size = lenghtOfNumber;
     digits = new unsigned char[lenghtOfNumber];
@@ -93,9 +96,10 @@ Octal::Octal(const Octal &other)
 
 Octal::Octal(Octal &&other) noexcept
 {
-    delete[] digits;
     size = other.size;
+    other.size = 0;
     digits = other.digits;
+    other.digits = nullptr;
 }
 
 Octal::~Octal() noexcept
@@ -103,76 +107,106 @@ Octal::~Octal() noexcept
     delete[] digits;
 }
 
-Octal& Octal::operator=(const Octal& other) {
+Octal &Octal::operator=(const Octal &other)
+{
+    if (this == &other)
+    {
+        throw std::logic_error("Self asigment");
+    }
     delete[] digits;
     size = other.size;
     digits = new unsigned char[size];
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; ++i)
+    {
         digits[i] = other.digits[i];
     }
     return *this;
 }
 
-bool Octal::operator==(const Octal &other) const{
-    if (size != other.size) return false;
-    for (int i = 0; i < size; ++i) {
-        if (digits[i] != other.digits[i]) return false;
-        }
+bool Octal::operator==(const Octal &other) const
+{
+    if (size != other.size)
+        return false;
+    for (int i = 0; i < size; ++i)
+    {
+        if (digits[i] != other.digits[i])
+            return false;
+    }
     return true;
-}   
-bool Octal::operator<(const Octal &other) const{
-    if (size < other.size) return true;
-    if (size > other.size) return false;
-
-    for (size_t i = size; i >= 0; i--) {
-        if (digits[i] < other.digits[i]) return true;
-        if (digits[i] > other.digits[i]) return false;
-        }
+}
+bool Octal::operator<(const Octal &other) const
+{
+    if (size < other.size)
+        return true;
+    if (size > other.size)
+        return false;
+    for (size_t i = size - 1; i >= 0; i--)
+    {
+        if (digits[i] < other.digits[i])
+            return true;
+        if (digits[i] > other.digits[i])
+            return false;
+    }
     return false;
 }
 
-bool Octal::operator>(const Octal &other) const{
-    if (size > other.size) return true;
-    if (size < other.size) return false;
-
-    for (int i = size; i >= 0; i--) {
-        if (digits[i] > other.digits[i]) return true;
-        if (digits[i] < other.digits[i]) return false;
-        }
+bool Octal::operator>(const Octal &other) const
+{
+    if (size > other.size)
+        return true;
+    if (size < other.size)
+        return false;
+    for (int i = size - 1; i >= 0; i--)
+    {
+        if (digits[i] < other.digits[i])
+            return false;
+        if (digits[i] > other.digits[i])
+            return true;
+    }
     return false;
 }
 
-Octal& Octal::operator+=(const Octal& other) {
+Octal &Octal::operator+=(const Octal &other)
+{
     int maxSize = size > other.size ? size : other.size;
     unsigned char *newDigits = new unsigned char[maxSize + 1];
-    size = other.size;
     int carry = 0;
-    for (int i = 0; i < maxSize; ++i) {
-        int digit1 = i < size ? digits[i] - '0' : 0; 
-        int digit2 = i < other.size ? other.digits[i] - '0' : 0; 
+    for (int i = 0; i < maxSize; ++i)
+    {
+        int digit1 = i < size ? digits[i] - '0' : 0;
+        int digit2 = i < other.size ? other.digits[i] - '0' : 0;
         int sumElements = digit1 + digit2 + carry;
-        carry = sumElements >= 8 ? 1 : 0; 
+        carry = sumElements >= 8 ? 1 : 0;
         newDigits[i] = '0' + sumElements % 8;
     }
-    if (carry == 1) newDigits[maxSize] = '1';
+    if (carry == 1)
+    {
+        newDigits[maxSize] = '1';
+        size = maxSize + 1;
+    }
+    else
+    {
+        size = maxSize;
+    }
     delete[] digits;
-    size = carry > 0 ? maxSize : maxSize + 1;
-    digits = newDigits; 
+    digits = newDigits;
     return *this;
 }
 
-Octal& Octal::operator-=(const Octal& other) {
-    if (*this < other) { 
-        throw std::logic_error("Reduced is less than the subtracted"); 
+Octal &Octal::operator-=(const Octal &other)
+{
+    if (*this < other)
+    {
+        throw std::logic_error("Reduced is less than the subtracted");
     }
     unsigned char *newDigits = new unsigned char[size];
-    size = other.size;
     int carry = 0;
-    for (int i = 0; i < size; ++i) {
-        int digit1 = i < size ? digits[i] - '0' : 0; 
-        int digit2 = i < other.size ? other.digits[i] - '0' : 0; 
+    for (int i = 0; i < size; ++i)
+    {
+        int digit1 = i < size ? digits[i] - '0' : 0;
+        int digit2 = i < other.size ? other.digits[i] - '0' : 0;
         int residualElements = digit1 - digit2 - carry;
-        carry = residualElements < 0 ? 1 : 0; 
+        carry = residualElements < 0 ? 1 : 0;
         newDigits[i] = '0' + (residualElements < 0 ? residualElements + 8 : residualElements);
     }
     delete[] digits;
@@ -180,9 +214,3 @@ Octal& Octal::operator-=(const Octal& other) {
     removeZeros();
     return *this;
 }
-
-/*
-+= done!
--= done!
-== done!
-   */

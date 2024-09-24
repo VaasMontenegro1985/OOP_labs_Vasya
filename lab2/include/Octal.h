@@ -8,10 +8,9 @@ unsigned char validateDigit(unsigned char digit);
 class Octal
 {
 private:
-    unsigned char *digits = nullptr;
     size_t size;
     void removeZeros();
-
+    unsigned char *digits = nullptr;
 public:
     Octal();
     Octal(const size_t &lenghtOfNumber, unsigned char defaultValue = 0);
