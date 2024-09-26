@@ -199,7 +199,19 @@ TEST(OctalTest, substruction_error) {
     Octal number2("2345");
  
     EXPECT_THROW(number1 -= number2, std::logic_error); 
-} 
+}
+
+TEST(OctalTest, GetterCheck) {
+    Octal number;
+    size_t expectedSize = 1;
+    unsigned char expectedData[] = {'0'};
+
+    size_t realSize = number.getSize();
+    unsigned char* realData = number.getData();
+
+    ASSERT_TRUE(realSize == expectedSize);
+    ASSERT_TRUE(realData[0] == expectedData[0]);
+}
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);

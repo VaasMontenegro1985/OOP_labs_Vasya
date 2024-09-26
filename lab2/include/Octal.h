@@ -25,6 +25,8 @@ public:
     bool operator==(const Octal &other) const;
     bool operator<(const Octal &other) const;
     bool operator>(const Octal &other) const;
+    size_t getSize() const;
+    unsigned char* getData() const;
 
     friend std::ostream& operator<< (std::ostream& os, const Octal &number);
 };

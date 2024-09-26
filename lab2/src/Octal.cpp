@@ -214,3 +214,11 @@ Octal &Octal::operator-=(const Octal &other)
     removeZeros();
     return *this;
 }
+
+size_t Octal::getSize() const {
+  return size;
+}
+
+unsigned char* Octal::getData() const {
+  return digits;
+}
