@@ -111,7 +111,7 @@ Octal &Octal::operator=(const Octal &other)
 {
     if (this == &other)
     {
-        throw std::logic_error("Self asigment");
+        throw std::logic_error("Self assignment");
     }
     delete[] digits;
     size = other.size;
@@ -140,12 +140,12 @@ bool Octal::operator<(const Octal &other) const
         return true;
     if (size > other.size)
         return false;
-    for (size_t i = size - 1; i >= 0; i--)
+    for (int i = size - 1; i >= 0; i--)
     {
-        if (digits[i] < other.digits[i])
-            return true;
         if (digits[i] > other.digits[i])
             return false;
+        if (digits[i] < other.digits[i])
+            return true;
     }
     return false;
 }

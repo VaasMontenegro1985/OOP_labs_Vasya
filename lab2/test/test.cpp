@@ -109,9 +109,9 @@ TEST(OctalTest, self_assigment) {
 
 
 TEST(OctalTest, ComparisonOperators) {
-    Octal number1({'3', '2', '1'});
-    Octal number2({'3', '2', '1'});
-    Octal number3({'1', '2', '3'});
+    const Octal number1({'3', '2', '1'});
+    const Octal number2({'3', '2', '1'});
+    const Octal number3({'1', '2', '3'});
 
     bool is1Equal2 = (number1 == number2);
     bool is1Equal3 = (number1 == number3);
