@@ -1,1 +1,0 @@
-/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/lab1_exe.dir/main.cpp.o -o lab1_exe  liblab1_lib_point.a liblab1_lib_figure.a liblab1_lib_rhombus.a liblab1_lib_rectangle.a liblab1_lib_trapezoid.a 

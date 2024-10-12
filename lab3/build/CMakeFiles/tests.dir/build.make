@@ -92,6 +92,17 @@ tests_EXTERNAL_OBJECTS =
 
 tests: CMakeFiles/tests.dir/test/test.cpp.o
 tests: CMakeFiles/tests.dir/build.make
+tests: liblab3_lib_point.a
+tests: lib/libgtest_main.a
+tests: liblab3_lib_figure.a
+tests: lib/libgtest_main.a
+tests: liblab3_lib_rhombus.a
+tests: lib/libgtest_main.a
+tests: liblab3_lib_rectangle.a
+tests: lib/libgtest_main.a
+tests: liblab3_lib_trapezoid.a
+tests: lib/libgtest_main.a
+tests: liblab3_lib_utils.a
 tests: lib/libgtest_main.a
 tests: lib/libgtest.a
 tests: CMakeFiles/tests.dir/link.txt

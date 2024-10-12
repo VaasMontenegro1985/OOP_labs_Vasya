@@ -222,13 +222,15 @@ CMakeFiles/lab3_lib_rhombus.dir/src/rhombus.cpp.o: /workspaces/OOP_labs_Vasya/la
   /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc \
   /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
   /workspaces/OOP_labs_Vasya/lab3/include/rhombus.h \
+  /workspaces/OOP_labs_Vasya/lab3/include/figure.h \
   /workspaces/OOP_labs_Vasya/lab3/include/point.h \
   /usr/local/include/c++/14.2.0/fstream \
   /usr/local/include/c++/14.2.0/bits/codecvt.h \
   /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/basic_file.h \
   /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++io.h \
   /usr/local/include/c++/14.2.0/bits/fstream.tcc \
-  /usr/local/include/c++/14.2.0/math.h
+  /usr/local/include/c++/14.2.0/math.h \
+  /workspaces/OOP_labs_Vasya/lab3/include/utils.h
 
 
 /usr/local/include/c++/14.2.0/math.h:
@@ -252,6 +254,8 @@ CMakeFiles/lab3_lib_rhombus.dir/src/rhombus.cpp.o: /workspaces/OOP_labs_Vasya/la
 /usr/local/include/c++/14.2.0/tr1/exp_integral.tcc:
 
 /usr/local/include/c++/14.2.0/tr1/ell_integral.tcc:
+
+/workspaces/OOP_labs_Vasya/lab3/include/figure.h:
 
 /usr/local/include/c++/14.2.0/tr1/bessel_function.tcc:
 
@@ -452,6 +456,8 @@ CMakeFiles/lab3_lib_rhombus.dir/src/rhombus.cpp.o: /workspaces/OOP_labs_Vasya/la
 /usr/local/include/c++/14.2.0/bits/exception.h:
 
 /usr/local/include/c++/14.2.0/bits/utility.h:
+
+/workspaces/OOP_labs_Vasya/lab3/include/utils.h:
 
 /usr/local/include/c++/14.2.0/bits/concept_check.h:
 

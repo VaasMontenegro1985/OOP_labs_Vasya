@@ -93,10 +93,12 @@ lab3_exe_EXTERNAL_OBJECTS =
 lab3_exe: CMakeFiles/lab3_exe.dir/main.cpp.o
 lab3_exe: CMakeFiles/lab3_exe.dir/build.make
 lab3_exe: liblab3_lib_point.a
+lab3_exe: liblab3_lib_utils.a
 lab3_exe: liblab3_lib_figure.a
 lab3_exe: liblab3_lib_rhombus.a
 lab3_exe: liblab3_lib_rectangle.a
 lab3_exe: liblab3_lib_trapezoid.a
+lab3_exe: liblab3_lib_utils.a
 lab3_exe: CMakeFiles/lab3_exe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/workspaces/OOP_labs_Vasya/lab3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab3_exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab3_exe.dir/link.txt --verbose=$(VERBOSE)

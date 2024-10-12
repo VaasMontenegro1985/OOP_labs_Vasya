@@ -18,24 +18,34 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+add_executable(${CMAKE_PROJECT_NAME}_exe main.cpp)
+
 add_library(${CMAKE_PROJECT_NAME}_lib_point src/point.cpp)
 add_library(${CMAKE_PROJECT_NAME}_lib_figure src/figure.cpp)
 add_library(${CMAKE_PROJECT_NAME}_lib_rhombus src/rhombus.cpp)
 add_library(${CMAKE_PROJECT_NAME}_lib_rectangle src/rectangle.cpp)
 add_library(${CMAKE_PROJECT_NAME}_lib_trapezoid src/trapezoid.cpp)
+add_library(${CMAKE_PROJECT_NAME}_lib_utils src/utils.cpp)
 
-add_executable(${CMAKE_PROJECT_NAME}_exe main.cpp)
 
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_point)
+target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_figure)
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_rhombus)
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_rectangle)
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_trapezoid)
-
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_rhombus PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils) 
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_rectangle PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_trapezoid PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
 
 enable_testing()
 
 add_executable(tests test/test.cpp)
-target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib gtest_main)
+target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib_point gtest_main)
+target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib_figure gtest_main)
+target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib_rhombus gtest_main)
+target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib_rectangle gtest_main)
+target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib_trapezoid gtest_main)
+target_link_libraries(tests ${CMAKE_PROJECT_NAME}_lib_utils gtest_main)
 
 add_test(NAME MyProjectTests COMMAND tests)

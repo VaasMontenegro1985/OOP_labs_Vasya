@@ -4,66 +4,110 @@
 #include <stdexcept>
 #include "../include/rhombus.h"
 #include "../include/point.h"
-#define EPS = 0.0000001
+#include "../include/utils.h"
 
-Rhombus::void check(Point aPoint, Point bPoint, Point cPoint){
+void Rhombus::check(Point aPoint, Point bPoint, Point cPoint)
+{
     Point ab = bPoint - aPoint;
     Point bc = bPoint - cPoint;
-    if (fabs(ab.abs() - bc.abs()) > EPS){
-        throw std::invalid_argument("Invalid coordinates, it can't be a Rhombus");}
+    Point dPoint = aPoint + cPoint - bPoint;
+    Point ac = aPoint - cPoint;
+    Point bd = bPoint - dPoint;
+    double diagonal1 = ac.abs();
+    double diagonal2 = bd.abs();
+    if (!Utils::eqDouble(ab.abs(), bc.abs()) || Utils::eqDouble(diagonal1, 0.0) || Utils::eqDouble(diagonal2, 0.0))
+    {
+        throw std::invalid_argument("Invalid coordinates, it can't be a Rhombus");
+    }
 };
 
-Rhombus::Rhombus() : a{Point()}, b{Point(1.0, 0.0)}, c{Point(0.0, 1.0)}, d{Point(1.0)} {};
+Rhombus::Rhombus() : a{Point(1.0, 0.0)}, b{Point()}, c{Point(0.0, 1.0)}, d{Point(1.0)} {};
 
 Rhombus::Rhombus(Point aPoint, Point bPoint, Point cPoint) : a{aPoint}, b{bPoint}, c{cPoint}, d{aPoint + cPoint - bPoint}
 {
     check(aPoint, bPoint, cPoint);
 }
-std::istream &Rhombus::input(std::istream &is) {
-    
-    
-    std::cout <<"Input a: "; 
-    is >> a; 
-    std::cout << "\tInput b: "; 
+
+Rhombus::Rhombus(const Rhombus &other) : Rhombus(other.a, other.b, other.c) {}
+Rhombus::Rhombus(Rhombus &&other) : Rhombus(other.a, other.b, other.c) {}
+
+Rhombus &Rhombus::operator=(const Rhombus &other)
+{
+    if (this == &other)
+        return *this;
+    a = other.a;
+    b = other.b;
+    c = other.c;
+    d = other.d;
+    return *this;
+}
+
+Rhombus &Rhombus::operator=(Rhombus &&other)
+{
+    a = other.a;
+    b = other.b;
+    c = other.c;
+    d = other.d;
+    return *this;
+}
+
+bool Rhombus::operator==(const Rhombus &other) const
+{
+    return (Utils::eqDouble((a - b).abs(), (other.a - other.b).abs()) &&
+            (Utils::eqDouble((a - c).abs(), (other.a - other.c).abs()) ||
+             Utils::eqDouble((a - c).abs(), (other.b - other.d).abs())));
+}
+
+std::istream &Rhombus::input(std::istream &is)
+{
+
+    std::cout << "Input a: ";
+    is >> a;
+    std::cout << "\tInput b: ";
     is >> b;
-    std::cout << "\tInput c: "; 
-    is >> c; 
-    std::cout << std::endl; 
+    std::cout << "\tInput c: ";
+    is >> c;
+    std::cout << std::endl;
 
     d = a + c - b;
 
     check(a, b, c);
 
-    return is; 
+    return is;
 };
 
-std::ostream& print (std::ostream& os) {
+std::ostream &Rhombus::print(std::ostream &os) const
+{
+
     os << "Rhombus have coordinates:" << std::endl;
     os << a;
     os << b;
     os << c;
-    os << d;
+    os << d << std::endl;
     return os;
 }
 
-Rhombus::Point calcCentrRotation(){
-    Point CentrRotation = (a + b + c + d) * (1/4);
+Point Rhombus::calcCentrRotation()
+{
+    Point CentrRotation = (a + b + c + d) * (1.0 / 4.0);
     return CentrRotation;
 };
 
-Rhombus::operator double(){
+Rhombus::operator double()
+{
     Point ac = a - c;
     Point bd = b - d;
     double diagonal1 = ac.abs();
     double diagonal2 = bd.abs();
-    return(diagonal1*diagonal2/2.0);
+    return (diagonal1 * diagonal2 * 0.5);
 };
 
-std::ostream& operator<< (std::ostream& os, const Rhombus &rhombus){
+std::ostream &operator<<(std::ostream &os, const Rhombus &rhombus)
+{
     return rhombus.print(os);
 };
 
-
-std::istream& operator>> (std::istream& is, Rhombus &rhombus){ 
+std::istream &operator>>(std::istream &is, Rhombus &rhombus)
+{
     return rhombus.input(is);
 };

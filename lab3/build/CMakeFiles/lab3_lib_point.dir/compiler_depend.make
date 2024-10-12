@@ -227,7 +227,8 @@ CMakeFiles/lab3_lib_point.dir/src/point.cpp.o: /workspaces/OOP_labs_Vasya/lab3/s
   /usr/local/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
   /usr/local/include/c++/14.2.0/tr1/poly_hermite.tcc \
   /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc \
-  /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc
+  /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+  /workspaces/OOP_labs_Vasya/lab3/include/utils.h
 
 
 /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc:
@@ -451,6 +452,8 @@ CMakeFiles/lab3_lib_point.dir/src/point.cpp.o: /workspaces/OOP_labs_Vasya/lab3/s
 /usr/local/include/c++/14.2.0/bits/exception.h:
 
 /usr/local/include/c++/14.2.0/bits/utility.h:
+
+/workspaces/OOP_labs_Vasya/lab3/include/utils.h:
 
 /usr/local/include/c++/14.2.0/bits/concept_check.h:
 

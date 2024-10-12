@@ -172,6 +172,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lab3_exe
+
+# Build rule for target.
+lab3_exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3_exe
+.PHONY : lab3_exe
+
+# fast build rule for target.
+lab3_exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_exe.dir/build.make CMakeFiles/lab3_exe.dir/build
+.PHONY : lab3_exe/fast
+
+#=============================================================================
 # Target rules for targets named lab3_lib_point
 
 # Build rule for target.
@@ -237,17 +250,17 @@ lab3_lib_trapezoid/fast:
 .PHONY : lab3_lib_trapezoid/fast
 
 #=============================================================================
-# Target rules for targets named lab3_exe
+# Target rules for targets named lab3_lib_utils
 
 # Build rule for target.
-lab3_exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3_exe
-.PHONY : lab3_exe
+lab3_lib_utils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3_lib_utils
+.PHONY : lab3_lib_utils
 
 # fast build rule for target.
-lab3_exe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_exe.dir/build.make CMakeFiles/lab3_exe.dir/build
-.PHONY : lab3_exe/fast
+lab3_lib_utils/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_lib_utils.dir/build.make CMakeFiles/lab3_lib_utils.dir/build
+.PHONY : lab3_lib_utils/fast
 
 #=============================================================================
 # Target rules for targets named tests
@@ -458,6 +471,30 @@ src/trapezoid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_lib_trapezoid.dir/build.make CMakeFiles/lab3_lib_trapezoid.dir/src/trapezoid.cpp.s
 .PHONY : src/trapezoid.cpp.s
 
+src/utils.o: src/utils.cpp.o
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_lib_utils.dir/build.make CMakeFiles/lab3_lib_utils.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
+
+src/utils.i: src/utils.cpp.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_lib_utils.dir/build.make CMakeFiles/lab3_lib_utils.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
+
+src/utils.s: src/utils.cpp.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3_lib_utils.dir/build.make CMakeFiles/lab3_lib_utils.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
+
 test/test.o: test/test.cpp.o
 .PHONY : test/test.o
 
@@ -505,6 +542,7 @@ help:
 	@echo "... lab3_lib_rectangle"
 	@echo "... lab3_lib_rhombus"
 	@echo "... lab3_lib_trapezoid"
+	@echo "... lab3_lib_utils"
 	@echo "... tests"
 	@echo "... main.o"
 	@echo "... main.i"
@@ -524,6 +562,9 @@ help:
 	@echo "... src/trapezoid.o"
 	@echo "... src/trapezoid.i"
 	@echo "... src/trapezoid.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 	@echo "... test/test.o"
 	@echo "... test/test.i"
 	@echo "... test/test.s"

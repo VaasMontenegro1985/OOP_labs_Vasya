@@ -13,12 +13,13 @@ class Point {
         Point (double xValue, double yValue); 
         Point (double value); 
         Point (const Point &other); 
-        Point& operator= (const Point &other); 
-        Point operator+ (const Point &other); 
-        Point operator- (const Point &other); 
-        Point operator* (double number);
-        double operator* (const Point &other);
-
+        Point& operator= (const Point &other);
+        Point &operator= (Point &&other); 
+        Point operator+ (const Point &other) const; 
+        Point operator- (const Point &other) const; 
+        Point operator* (double number) const;
+        double operator* (const Point &other) const;
+        bool operator== (const Point &other) const;
         double abs (); 
         double getX (); 
         double getY (); 
