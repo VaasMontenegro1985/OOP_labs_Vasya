@@ -133,6 +133,24 @@ TEST(TrapezoidTest, validCenter) {
     ASSERT_TRUE(result == true);
 }
 
+TEST(TrapezoidTest, EqualTrapezoid) {
+    Point a(3.0, 0.0), b(4.0, 1.0), c(5.0, 1.0), d(6.0, 0.0);
+    Trapezoid trapezoid1(a, b, c, d);
+    Point e(3.0, 1.0), f(4.0, 2.0), g(5.0, 2.0), h(6.0, 1.0);
+    Trapezoid trapezoid2(e, f, g, h);
+    bool result = (trapezoid1 == trapezoid2);
+    ASSERT_TRUE(result == true);
+}
+
+TEST(TrapezoidTest, EqualTrapezoid1) {
+    Point a(3.0, 0.0), b(4.0, 1.0), c(5.0, 1.0), d(6.0, 0.0);
+    Trapezoid trapezoid1(a, b, c, d);
+    Point e(3.0, 2.0), f(4.0, 1.0), g(5.0, 1.0), h(6.0, 2.0);
+    Trapezoid trapezoid2(e, f, g, h);
+    bool result = (trapezoid1 == trapezoid2);
+    ASSERT_TRUE(result == true);
+}
+
 TEST(RectangleTest, ConstructorRectangle) {
     Rectangle rectangle = Rectangle();
     Point a(0.0, 0.0), b(1.0, 0.0), c(1.0, 1.0);
@@ -168,6 +186,15 @@ TEST(RectangleTest, Center) {
     Point realCenter(2.0, 1.0);
     Point center = rectangle.calcCentrRotation();
     bool result = (center == realCenter);
+    ASSERT_TRUE(result == true);
+}
+
+TEST(RectangleTest, EqualRectangle) {
+    Point a(0.0, 0.0), b(2.0, 0.0), c(2.0, 2.0);
+    Rectangle rectangle1(a, b, c);
+    Point d(1.0, 1.0),e(3.0, 1.0), f(3.0, 3.0);
+    Rectangle rectangle2(d, e, f);
+    bool result = (rectangle1 == rectangle2);
     ASSERT_TRUE(result == true);
 }
 
@@ -210,6 +237,14 @@ TEST(RhombusTest, Center) {
     ASSERT_TRUE(result == true);
 }
 
+TEST(RhombusTest, EqualRhombus) {
+    Point a(0.0, -1.0), b(2.0, 0.0), c(4.0, -1.0);
+    Rhombus rhombus1(a, b, c);
+    Point d(0.0, -1.0),e(1.0, 1.0), f(0.0, 3.0);
+    Rhombus rhombus2(d, e, f);
+    bool result = (rhombus1 == rhombus2);
+    ASSERT_TRUE(result == true);
+}
 
 int main(int argc, char **argv)
 {
