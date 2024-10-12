@@ -12,9 +12,13 @@ void Trapezoid::check(Point aPoint, Point bPoint, Point cPoint, Point dPoint)
     Point bc = bPoint - cPoint;
     Point cd = cPoint - dPoint;
     Point ad = aPoint - dPoint;
+    Point ac = aPoint - cPoint;
+    Point bd = bPoint - dPoint;
+    double diagonal1 = ac.abs();
+    double diagonal2 = bd.abs();
     bool isParallel_ab_cd(Utils::eqDouble(ab * cd, (ab.abs() * cd.abs())));
     bool isParallel_bc_ad(Utils::eqDouble(bc * ad, (bc.abs() * ad.abs())));
-    if (!(isParallel_ab_cd ^ isParallel_bc_ad))
+    if (!(isParallel_ab_cd ^ isParallel_bc_ad) || Utils::eqDouble(diagonal1, 0.0) || Utils::eqDouble(diagonal2, 0.0))
     {
         throw std::invalid_argument("Invalid coordinates, it can't be a Trapezoid");
     }

@@ -10,7 +10,12 @@ void Rectangle::check(Point aPoint, Point bPoint, Point cPoint)
 {
     Point ab = bPoint - aPoint;
     Point bc = bPoint - cPoint;
-    if (!Utils::eqDouble((ab * bc), 0))
+    Point dPoint = aPoint + cPoint - bPoint;
+    Point ac = aPoint - cPoint;
+    Point bd = bPoint - dPoint;
+    double diagonal1 = ac.abs();
+    double diagonal2 = bd.abs();
+    if (!Utils::eqDouble((ab * bc), 0) || Utils::eqDouble(diagonal1, 0.0) || Utils::eqDouble(diagonal2, 0.0))
     {
         throw std::invalid_argument("Invalid coordinates, it can't be a Rectangle");
     }

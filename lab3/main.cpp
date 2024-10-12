@@ -128,7 +128,7 @@ void addFigure(Figure **figures, int size)
     int index = -1;
     while (index < 0 || index >= size)
     {
-        std::cout << "Input index between 0 and " << (size - 1) << ": ";
+        std::cout << "Input index from 0 to " << (size - 1) << ": ";
         std::cin >> index;
     }
 
@@ -143,7 +143,7 @@ void deleteFigure(Figure **figures, int size)
     int index = -1;
     while (index < 0 || index >= size)
     {
-        std::cout << "Input index between 0 and " << (size - 1) << ": ";
+        std::cout << "Input index from 0 to " << (size - 1) << ": ";
         std::cin >> index;
     }
 
