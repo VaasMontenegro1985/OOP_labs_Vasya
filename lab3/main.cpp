@@ -173,7 +173,7 @@ void printInfo(Figure **figures, int size)
     {
         if (figures[i] == nullptr)
             continue;
-        std::cout << "Figure's index :" << i << std::endl;
+        std::cout << "Figure's index:" << i << std::endl;
         std::cout << *figures[i];
         std::cout << "Rotation center: " << figures[i]->calcCentrRotation() << std::endl;
         std::cout << "Area: " << static_cast<double>(*figures[i]) << std::endl;

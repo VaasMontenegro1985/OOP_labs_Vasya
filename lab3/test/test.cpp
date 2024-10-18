@@ -201,7 +201,7 @@ TEST(TrapezoidTest, ValidTrapezoid) {
     });
 }
 
-TEST(TrapezoidTest, EqTrapezoid) {
+TEST(TrapezoidTest, EqTrapezoid1) {
     Point a1(0.0), b1(1.0), c1(2.0, 1.0), d1(3.0, 0.0);
     Point a2(0.0), b2(1.0), c2(2.0, 1.0), d2(3.0, 0.0);
     Point a3(0.0), b3(1.0, -1.0), c3(2.0, -1.0), d3(3.0, 0.0);
@@ -211,11 +211,33 @@ TEST(TrapezoidTest, EqTrapezoid) {
     Trapezoid trapezoid3(a3, b3, c3, d3);
     Trapezoid trapezoid4(a4, b4, c4, d4);
     bool result = trapezoid1 == trapezoid2;
-    bool result1 = trapezoid2 == trapezoid3;
-    bool result2 = trapezoid1 == trapezoid4;
     ASSERT_TRUE(result == true);
-    ASSERT_TRUE(result1 == true);
-    ASSERT_TRUE(result2 == false);
+}
+
+TEST(TrapezoidTest, EqTrapezoid2) {
+    Point a1(0.0), b1(1.0), c1(2.0, 1.0), d1(3.0, 0.0);
+    Point a2(0.0), b2(1.0), c2(2.0, 1.0), d2(3.0, 0.0);
+    Point a3(0.0), b3(1.0, -1.0), c3(2.0, -1.0), d3(3.0, 0.0);
+    Point a4(0.0), b4(1.0), c4(3.0, 1.0), d4(4.0, 0.0);
+    Trapezoid trapezoid1(a1, b1, c1, d1);
+    Trapezoid trapezoid2(a2, b2, c2, d2);
+    Trapezoid trapezoid3(a3, b3, c3, d3);
+    Trapezoid trapezoid4(a4, b4, c4, d4);
+    bool result = trapezoid2 == trapezoid3;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(TrapezoidTest, EqTrapezoid3) {
+    Point a1(0.0), b1(1.0), c1(2.0, 1.0), d1(3.0, 0.0);
+    Point a2(0.0), b2(1.0), c2(2.0, 1.0), d2(3.0, 0.0);
+    Point a3(0.0), b3(1.0, -1.0), c3(2.0, -1.0), d3(3.0, 0.0);
+    Point a4(0.0), b4(1.0), c4(3.0, 1.0), d4(4.0, 0.0);
+    Trapezoid trapezoid1(a1, b1, c1, d1);
+    Trapezoid trapezoid2(a2, b2, c2, d2);
+    Trapezoid trapezoid3(a3, b3, c3, d3);
+    Trapezoid trapezoid4(a4, b4, c4, d4);
+    bool result = trapezoid1 == trapezoid4;
+    ASSERT_TRUE(result == false);
 }
 
 TEST(TrapezoidTest, ConstructorAndArea) {
@@ -273,7 +295,7 @@ TEST(RectangleTest, InvalidRectangleZero) {
     }, std::invalid_argument);
 }
 
-TEST(RectangleTest, EqRectangle) {
+TEST(RectangleTest, EqRectangle1) {
     Point a1(0.0, 0.0), b1(0.0, 1.0), c1(2.0, 1.0);
     Point a2(0.0, 1.0), b2(0.0, 2.0), c2(2.0, 2.0);
     Point a3(0.0, 0.0), b3(0.0, 2.0), c3(1.0, 2.0);
@@ -283,11 +305,29 @@ TEST(RectangleTest, EqRectangle) {
     Rectangle rectangle3(a3, b3, c3);
     Rectangle rectangle4(a4, b4, c4);
     bool result = rectangle1 == rectangle2;
-    bool result1 = rectangle2 == rectangle3;
-    bool result2 = rectangle1 == rectangle4;
     ASSERT_TRUE(result == true);
-    ASSERT_TRUE(result1 == true);
-    ASSERT_TRUE(result2 == false);
+}
+
+TEST(RectangleTest, EqRectangle2) {
+    Point a1(0.0, 0.0), b1(0.0, 1.0), c1(2.0, 1.0);
+    Point a2(0.0, 1.0), b2(0.0, 2.0), c2(2.0, 2.0);
+    Point a3(0.0, 0.0), b3(0.0, 2.0), c3(1.0, 2.0);
+    Point a4(0.0, 0.0), b4(1.0, 0.0), c4(1.0, 1.0);
+    Rectangle rectangle1(a1, b1, c1);
+    Rectangle rectangle2(a2, b2, c2);
+    Rectangle rectangle3(a3, b3, c3);
+    Rectangle rectangle4(a4, b4, c4);
+    bool result = rectangle2 == rectangle3;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(RectangleTest, EqRectangle3) {
+    Point a1(0.0, 0.0), b1(0.0, 1.0), c1(2.0, 1.0);
+    Point a2(0.0, 0.0), b2(1.0, 0.0), c2(1.0, 1.0);
+    Rectangle rectangle1(a1, b1, c1);
+    Rectangle rectangle2(a2, b2, c2);
+    bool result = rectangle1 == rectangle2;
+    ASSERT_TRUE(result == false);
 }
 
 TEST(RectangleTest, ConstructorAndArea) {
@@ -335,7 +375,7 @@ TEST(RhombusTest, ValidRhombus) {
     });
 }
 
-TEST(RhombusTest, EqRhombus) {
+TEST(RhombusTest, EqRhombus1) {
     Point a1(0.0, 0.0), b1(2.0, 1.0), c1(4.0, 0.0);
     Point a2(0.0, 1.0), b2(1.0, 3.0), c2(0.0, 5.0);
     Point a3(0.0, 1.0), b3(1.0, 3.0), c3(0.0, 5.0);
@@ -345,12 +385,36 @@ TEST(RhombusTest, EqRhombus) {
     Rhombus rhombus3(a3, b3, c3);
     Rhombus rhombus4(a4, b4, c4);
     bool result = rhombus1 == rhombus2;
-    bool result1 = rhombus2 == rhombus3;
-    bool result2 = rhombus1 == rhombus4;
     ASSERT_TRUE(result == true);
-    ASSERT_TRUE(result1 == true);
-    ASSERT_TRUE(result2 == false);
 }
+
+TEST(RhombusTest, EqRhombus2) {
+    Point a1(0.0, 0.0), b1(2.0, 1.0), c1(4.0, 0.0);
+    Point a2(0.0, 1.0), b2(1.0, 3.0), c2(0.0, 5.0);
+    Point a3(0.0, 1.0), b3(1.0, 3.0), c3(0.0, 5.0);
+    Point a4(0.0, 0.0), b4(1.0, 1.0), c4(2.0, 0.0);
+    Rhombus rhombus1(a1, b1, c1);
+    Rhombus rhombus2(a2, b2, c2);
+    Rhombus rhombus3(a3, b3, c3);
+    Rhombus rhombus4(a4, b4, c4);
+    bool result = rhombus2 == rhombus3;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(RhombusTest, EqRhombus3) {
+    Point a1(0.0, 0.0), b1(2.0, 1.0), c1(4.0, 0.0);
+    Point a2(0.0, 1.0), b2(1.0, 3.0), c2(0.0, 5.0);
+    Point a3(0.0, 1.0), b3(1.0, 3.0), c3(0.0, 5.0);
+    Point a4(0.0, 0.0), b4(1.0, 1.0), c4(2.0, 0.0);
+    Rhombus rhombus1(a1, b1, c1);
+    Rhombus rhombus2(a2, b2, c2);
+    Rhombus rhombus3(a3, b3, c3);
+    Rhombus rhombus4(a4, b4, c4);
+    bool result = rhombus1 == rhombus4;
+    ASSERT_TRUE(result == false);
+}
+
+
 
 TEST(RhombusTest, ConstructorAndArea) {
     Point a(1.0, 0.0), b(2.0, 1.0), c(3.0, 0.0);
