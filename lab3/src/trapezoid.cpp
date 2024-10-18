@@ -33,13 +33,13 @@ Trapezoid::Trapezoid(Point aPoint, Point bPoint, Point cPoint, Point dPoint) : a
 
 void Trapezoid::isIsosceles(Point aPoint, Point bPoint, Point cPoint, Point dPoint)
 {
-    Point ab = bPoint - aPoint;
+    Point ab = aPoint - bPoint;
     Point bc = bPoint - cPoint;
     Point cd = cPoint - dPoint;
     Point ad = aPoint - dPoint;
-    if (!Utils::eqDouble(ab.abs(), cd.abs()) && !Utils::eqDouble(bc.abs(), ad.abs()))
+    if ((!Utils::eqDouble(ab.abs(), cd.abs())) && (!Utils::eqDouble(bc.abs(), ad.abs())))
     {
-        throw std::invalid_argument("Invalid coordinates, centr can't be found");
+        throw std::invalid_argument("Invalid coordinates, center can't be found");
     }
 };
 
