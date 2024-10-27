@@ -71,6 +71,15 @@ public:
         d = std::make_unique<Point<T>>(dPoint);
     }
 
+    Rhombus(Point<T>&& aPoint, Point<T>&& bPoint, Point<T>&& cPoint) {
+        Point<T> dPoint = aPoint + cPoint - bPoint;
+        check(aPoint, bPoint, cPoint);
+        a = std::make_unique<Point<T>>(aPoint);
+        b = std::make_unique<Point<T>>(bPoint);
+        c = std::make_unique<Point<T>>(cPoint);
+        d = std::make_unique<Point<T>>(dPoint);
+    }
+
     Rhombus(const Rhombus& other) 
         : a(std::make_unique<Point<T>>(*other.a)), b(std::make_unique<Point<T>>(*other.b)), c(std::make_unique<Point<T>>(*other.c)), d(std::make_unique<Point<T>>(*other.d)) {}
 

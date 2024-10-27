@@ -95,6 +95,14 @@ class Trapezoid : public Figure<T>
         d = std::make_unique<Point<T>>(dPoint); 
         }
 
+        Trapezoid(Point<T>&& aPoint, Point<T>&& bPoint, Point<T>&& cPoint, Point<T>&& dPoint){
+        check(aPoint, bPoint, cPoint, dPoint);
+        a = std::make_unique<Point<T>>(aPoint);
+        b = std::make_unique<Point<T>>(bPoint);
+        c = std::make_unique<Point<T>>(cPoint);
+        d = std::make_unique<Point<T>>(dPoint); 
+        }
+
         Trapezoid(const Trapezoid& other) 
         : a(std::make_unique<Point<T>>(*other.a)), b(std::make_unique<Point<T>>(*other.b)), c(std::make_unique<Point<T>>(*other.c)), d(std::make_unique<Point<T>>(*other.d)) {}
 

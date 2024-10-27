@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblab4_lib_trapezoid.a CMakeFiles/lab4_lib_trapezoid.dir/src/trapezoid.cpp.o
-/usr/bin/ranlib liblab4_lib_trapezoid.a

@@ -280,8 +280,14 @@ CMakeFiles/lab4_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab4/main.cpp \
   /usr/local/include/c++/14.2.0/bits/ranges_algobase.h \
   /usr/local/include/c++/14.2.0/pstl/glue_memory_defs.h \
   /usr/local/include/c++/14.2.0/pstl/execution_defs.h \
-  /workspaces/OOP_labs_Vasya/lab4/include/trapezoid.h
+  /workspaces/OOP_labs_Vasya/lab4/include/trapezoid.h \
+  /workspaces/OOP_labs_Vasya/lab4/include/rectangle.h \
+  /workspaces/OOP_labs_Vasya/lab4/include/array.h
 
+
+/workspaces/OOP_labs_Vasya/lab4/include/array.h:
+
+/workspaces/OOP_labs_Vasya/lab4/include/rectangle.h:
 
 /workspaces/OOP_labs_Vasya/lab4/include/trapezoid.h:
 

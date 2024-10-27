@@ -62,7 +62,16 @@ protected:
 public:
     Rectangle() : a(std::make_unique<Point<T>>()), b(std::make_unique<Point<T>>(0.0, 1.0)), c(std::make_unique<Point<T>>(1.0)), d(std::make_unique<Point<T>>(1.0, 0.0)) {}
 
-    Rectangle(Point<T>& aPoint, Point<T>& bPoint, Point<T> &cPoint) {
+    Rectangle(Point<T>&& aPoint, Point<T>&& bPoint, Point<T>&& cPoint) {
+        Point<T> dPoint = aPoint + cPoint - bPoint;
+        check(aPoint, bPoint, cPoint);
+        a = std::make_unique<Point<T>>(aPoint);
+        b = std::make_unique<Point<T>>(bPoint);
+        c = std::make_unique<Point<T>>(cPoint);
+        d = std::make_unique<Point<T>>(dPoint);
+    }
+    
+    Rectangle(Point<T>& aPoint, Point<T>& bPoint, Point<T>& cPoint) {
         Point<T> dPoint = aPoint + cPoint - bPoint;
         check(aPoint, bPoint, cPoint);
         a = std::make_unique<Point<T>>(aPoint);

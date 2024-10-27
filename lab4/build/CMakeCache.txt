@@ -356,24 +356,6 @@ gtest_force_shared_crt:BOOL=ON
 gtest_hide_internal_symbols:BOOL=OFF
 
 //Value Computed by CMake
-lab3_BINARY_DIR:STATIC=/workspaces/OOP_labs_Vasya/lab4/build
-
-//Value Computed by CMake
-lab3_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-lab3_SOURCE_DIR:STATIC=/workspaces/OOP_labs_Vasya/lab4
-
-//Dependencies for the target
-lab3_lib_rectangle_LIB_DEPENDS:STATIC=general;lab3_lib_utils;
-
-//Dependencies for the target
-lab3_lib_rhombus_LIB_DEPENDS:STATIC=general;lab3_lib_utils;
-
-//Dependencies for the target
-lab3_lib_trapezoid_LIB_DEPENDS:STATIC=general;lab3_lib_utils;
-
-//Value Computed by CMake
 lab4_BINARY_DIR:STATIC=/workspaces/OOP_labs_Vasya/lab4/build
 
 //Value Computed by CMake
@@ -381,15 +363,6 @@ lab4_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 lab4_SOURCE_DIR:STATIC=/workspaces/OOP_labs_Vasya/lab4
-
-//Dependencies for the target
-lab4_lib_rectangle_LIB_DEPENDS:STATIC=general;lab4_lib_utils;
-
-//Dependencies for the target
-lab4_lib_rhombus_LIB_DEPENDS:STATIC=general;lab4_lib_utils;
-
-//Dependencies for the target
-lab4_lib_trapezoid_LIB_DEPENDS:STATIC=general;lab4_lib_utils;
 
 
 ########################

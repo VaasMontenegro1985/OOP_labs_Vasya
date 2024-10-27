@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblab4_lib_rhombus.a CMakeFiles/lab4_lib_rhombus.dir/src/rhombus.cpp.o
-/usr/bin/ranlib liblab4_lib_rhombus.a
