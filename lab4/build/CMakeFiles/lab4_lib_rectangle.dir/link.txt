@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab4_lib_rectangle.a CMakeFiles/lab4_lib_rectangle.dir/src/rectangle.cpp.o
+/usr/bin/ranlib liblab4_lib_rectangle.a
