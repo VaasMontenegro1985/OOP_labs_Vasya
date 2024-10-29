@@ -182,11 +182,12 @@ void printInfo(Figure **figures, int size)
 
 void getTotalArea(Figure **figures, int size)
 {
-    double totalArea = 0.0;
+    
     for (int i = 0; i < size; i++)
     {
         if (figures[i] == nullptr)
             continue;
+        double totalArea = 0.0;
         totalArea += static_cast<double>(*figures[i]);
     }
     std::cout << "Total area is " << totalArea << std::endl;
