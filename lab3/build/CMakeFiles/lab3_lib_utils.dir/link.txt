@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab3_lib_utils.a CMakeFiles/lab3_lib_utils.dir/src/utils.cpp.o
+/usr/bin/ranlib liblab3_lib_utils.a

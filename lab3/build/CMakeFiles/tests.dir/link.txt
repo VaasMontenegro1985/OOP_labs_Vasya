@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/tests.dir/test/test.cpp.o -o tests  liblab3_lib_point.a lib/libgtest_main.a liblab3_lib_figure.a lib/libgtest_main.a liblab3_lib_rhombus.a lib/libgtest_main.a liblab3_lib_rectangle.a lib/libgtest_main.a liblab3_lib_trapezoid.a lib/libgtest_main.a liblab3_lib_utils.a lib/libgtest_main.a lib/libgtest.a 
