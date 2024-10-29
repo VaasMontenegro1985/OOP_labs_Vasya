@@ -8,7 +8,7 @@
 template <Integral T>
 class Figure{
     public:
-        virtual Point<T> calcCentrRotation() = 0;
+        virtual Point<double> calcCentrRotation() = 0;
         virtual operator double() = 0;
         virtual std::ostream& print (std::ostream& os) const = 0;
         virtual std::istream& input (std::istream& is) = 0;

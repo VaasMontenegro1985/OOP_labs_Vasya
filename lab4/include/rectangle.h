@@ -116,8 +116,12 @@ public:
                 Utils::eqDouble((*b - *c).abs(), (*other.a - *other.b).abs())));
     }
 
-    Point<T> calcCentrRotation() override {
-        Point<double> CentrRotation = (*a + *b + *c + *d) * (1.0 / 4.0);
+    Point<double> calcCentrRotation() override {
+        Point<double> aDouble(a->getX(),a->getY());
+        Point<double> bDouble(b->getX(),b->getY());
+        Point<double> cDouble(c->getX(),c->getY());
+        Point<double> dDouble(d->getX(),d->getY());
+        Point<double> CentrRotation = (aDouble + bDouble + cDouble + dDouble) * (1.0 / 4.0);
         return CentrRotation;
     }
 

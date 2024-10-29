@@ -81,6 +81,14 @@ class Array{
             return *this;
         }
 
+        bool operator== (const Array<T> &other){
+            if (size != other.size) return false;
+            for (int i = 0; i < size; i++){
+                if (data[i] != other.data[i]) return false;
+            }
+            return true;
+        }
+
         ~Array () {
             if constexpr (IS_ARRAY_OF_PTR) freeLinks();
         };
@@ -133,7 +141,9 @@ class Array{
         }
 
         void freeLinks(){
-            
+            for (int i = 0; i < size; i++){
+                delete data[i];
+            }
         }
 
         std::size_t getSize() const{

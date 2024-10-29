@@ -5,6 +5,7 @@
 #include "../include/rhombus.h"
 #include "../include/rectangle.h"
 #include "../include/trapezoid.h"
+#include "../include/array.h"
 
 TEST(UtilsTest, testeqDouble)
 {
@@ -46,7 +47,7 @@ TEST(UtilsTest, testSTriangleFalse)
 
 TEST(PointTest, testConctructorAndEquality)
 {
-    Point a = Point();
+    Point<double> a;
     Point b(0.0, 0.0);
     bool result = (a == b);
     ASSERT_TRUE(result == true);
@@ -60,9 +61,22 @@ TEST(PointTest, testEqualityFalse)
     ASSERT_TRUE(result == false);
 }
 
+TEST(PointTest, getterX) {
+    Point point(2.0, 3.0);
+    double getXRes = point.getX();
+
+    ASSERT_TRUE(getXRes == 2.0);
+}
+
+TEST(PointTest, getterY) {
+    Point point(2.0, 3.0);
+    double getYRes = point.getY();
+
+    ASSERT_TRUE(getYRes == 3.0);
+}
 TEST(PointTest, testConctructorFalse)
 {
-    Point a = Point();
+    Point<double> a;
     Point b(1.0);
     bool result = (a == b);
     ASSERT_TRUE(result == false);
@@ -173,8 +187,8 @@ TEST(PointTest, testCopy) {
 }
 
 TEST(TrapezoidTest, ConstructorTrapezoid) {
-    Trapezoid trapezoid = Trapezoid();
-    Point a(0.0, 0.0), b(1.0, 1.0), c(2.0, 1.0), d(3.0, 0.0);
+    Trapezoid<double> trapezoid;
+    Point a(0.0), b(1.0), c(2.0, 1.0), d(3.0, 0.0);
     Trapezoid t(a, b, c, d);
     bool result = (trapezoid == t);
     ASSERT_TRUE(result == true);
@@ -195,43 +209,39 @@ TEST(TrapezoidTest, InvalidTrapezoidZer0) {
 }
 
 TEST(TrapezoidTest, ValidTrapezoid) {
-    Point a(0.0, 0.0), b(4.0, 0.0), c(3.0, 2.0), d(1.0, 2.0);
+    Point a(0.0, 0.0), b(3.0, 4.0), c(5.0, 4.0), d(8.0, 0.0);
     EXPECT_NO_THROW({
         Trapezoid t(a, b, c, d);
     });
 }
 
 TEST(TrapezoidTest, EqTrapezoid1) {
-    Point a1(0.0), b1(1.0), c1(2.0, 1.0), d1(3.0, 0.0);
-    Point a2(0.0), b2(1.0), c2(2.0, 1.0), d2(3.0, 0.0);
-    Point a3(0.0), b3(1.0, -1.0), c3(2.0, -1.0), d3(3.0, 0.0);
-    Point a4(0.0), b4(1.0), c4(3.0, 1.0), d4(4.0, 0.0);
+    Point a1(0.0, 0.0), b1(3.0, 4.0), c1(5.0, 4.0), d1(8.0, 0.0);
+    Point a2(0.0, 0.0), b2(3.0, 4.0), c2(5.0, 4.0), d2(8.0, 0.0);
+    Point a3(0.0, 0.0), b3(3.0, -4.0), c3(5.0, -4.0), d3(8.0, 0.0);
     Trapezoid trapezoid1(a1, b1, c1, d1);
     Trapezoid trapezoid2(a2, b2, c2, d2);
     Trapezoid trapezoid3(a3, b3, c3, d3);
-    Trapezoid trapezoid4(a4, b4, c4, d4);
     bool result = trapezoid1 == trapezoid2;
     ASSERT_TRUE(result == true);
 }
 
 TEST(TrapezoidTest, EqTrapezoid2) {
-    Point a1(0.0), b1(1.0), c1(2.0, 1.0), d1(3.0, 0.0);
-    Point a2(0.0), b2(1.0), c2(2.0, 1.0), d2(3.0, 0.0);
-    Point a3(0.0), b3(1.0, -1.0), c3(2.0, -1.0), d3(3.0, 0.0);
-    Point a4(0.0), b4(1.0), c4(3.0, 1.0), d4(4.0, 0.0);
+    Point a1(0.0, 0.0), b1(3.0, 4.0), c1(5.0, 4.0), d1(8.0, 0.0);
+    Point a2(0.0, 0.0), b2(3.0, 4.0), c2(5.0, 4.0), d2(8.0, 0.0);
+    Point a3(0.0, 0.0), b3(3.0, -4.0), c3(5.0, -4.0), d3(8.0, 0.0);
     Trapezoid trapezoid1(a1, b1, c1, d1);
     Trapezoid trapezoid2(a2, b2, c2, d2);
     Trapezoid trapezoid3(a3, b3, c3, d3);
-    Trapezoid trapezoid4(a4, b4, c4, d4);
     bool result = trapezoid2 == trapezoid3;
     ASSERT_TRUE(result == true);
 }
 
 TEST(TrapezoidTest, EqTrapezoid3) {
-    Point a1(0.0), b1(1.0), c1(2.0, 1.0), d1(3.0, 0.0);
-    Point a2(0.0), b2(1.0), c2(2.0, 1.0), d2(3.0, 0.0);
-    Point a3(0.0), b3(1.0, -1.0), c3(2.0, -1.0), d3(3.0, 0.0);
-    Point a4(0.0), b4(1.0), c4(3.0, 1.0), d4(4.0, 0.0);
+    Point a1(0.0, 0.0), b1(3.0, 4.0), c1(5.0, 4.0), d1(8.0, 0.0);
+    Point a2(0.0, 0.0), b2(3.0, 4.0), c2(5.0, 4.0), d2(8.0, 0.0);
+    Point a3(0.0, 0.0), b3(3.0, -4.0), c3(5.0, -4.0), d3(8.0, 0.0);
+    Point a4(0.0), b4(4.0, 0.0), c4(3.0, 2.0), d4(1.0, 2.0);
     Trapezoid trapezoid1(a1, b1, c1, d1);
     Trapezoid trapezoid2(a2, b2, c2, d2);
     Trapezoid trapezoid3(a3, b3, c3, d3);
@@ -241,7 +251,7 @@ TEST(TrapezoidTest, EqTrapezoid3) {
 }
 
 TEST(TrapezoidTest, ConstructorAndArea) {
-    Point a(0.0, 0.0), b(4.0, 0.0), c(3.0, 2.0), d(1.0, 2.0);
+    Point a(0.0), b(4.0, 0.0), c(3.0, 2.0), d(1.0, 2.0);
     Trapezoid trapezoid(a, b, c, d);
     bool result = Utils::eqDouble((double)(trapezoid), 6.0);
     bool result1 = Utils::eqDouble((double)(trapezoid), 5.0);
@@ -249,7 +259,7 @@ TEST(TrapezoidTest, ConstructorAndArea) {
     ASSERT_TRUE(result1 == false);
 }
 
-TEST(TrapezoidTest, validCenter) {
+TEST(TrapezoidTest, Center) {
     Point a(0.0), b(4.0, 0.0), c(3.0, 2.0), d(1.0, 2.0);
     Trapezoid trapezoid(a, b, c, d);
     Point realCenter(2.0, 1.0);
@@ -258,16 +268,8 @@ TEST(TrapezoidTest, validCenter) {
     ASSERT_TRUE(result == true);
 }
 
-TEST(TrapezoidTest, InvalidCenter) {
-    Point a(0.0, 0.0), b(1.0, 1.0), c(2.0, 1.0), d(5.0, 0.0);
-    Trapezoid t(a, b, c, d);
-    EXPECT_THROW({
-        Point centr = t.calcCentrRotation();
-    }, std::invalid_argument);
-}
-
 TEST(RectangleTest, ConstructorRectangle) {
-    Rectangle rectangle = Rectangle();
+    Rectangle<double> rectangle;
     Point a(0.0, 0.0), b(1.0, 0.0), c(1.0, 1.0);
     Rectangle r(a, b, c);
     bool result = (rectangle == r);
@@ -347,7 +349,7 @@ TEST(RectangleTest, Center) {
 }
 
 TEST(RhombusTest, ConstructorRhombus) {
-    Rhombus rhombus = Rhombus();
+    Rhombus<double> rhombus;
     Point a(1.0, 0.0), b(0.0, 0.0), c(0.0, 1.0);
     Rhombus r(a, b, c);
     bool result = (rhombus == r);
@@ -432,6 +434,210 @@ TEST(RhombusTest, Center) {
     ASSERT_TRUE(result == true);
 }
 
+TEST(ArrayTest, defaultConstructor) {
+    Array<int> array;
+    int result = array.getSize();
+
+    ASSERT_TRUE(result == 0);
+}
+
+TEST(ArrayTest, Append) {
+    Array<int> array;
+    array.append(0);
+    int firstElem = array[0];
+    int length = array.getSize();
+
+    ASSERT_TRUE(firstElem == 0 && length == 1);
+}
+
+TEST(ArrayTest, Extend) {
+    const int countToAdd = 100;
+
+    Array<int> array;
+    
+    ASSERT_NO_THROW({
+        for (int i = 0; i < countToAdd; i++) {
+            array.append(i);
+        }
+    });
+
+    int length = array.getSize();
+
+    ASSERT_TRUE(length == countToAdd);
+}
+
+TEST(ArrayTest, DeleteOnIndex) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+    array.append(3);
+
+    array.deleteOnIndex(1);
+
+    int firstElem = array[0];
+    int secondElem = array[1];
+    int length = array.getSize();
+
+    ASSERT_TRUE(firstElem == 1 && secondElem == 3 && length == 2);
+}
+
+TEST(ArrayTest, DeleteOnIndexlast) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+
+    array.deleteOnIndex(1);
+
+    int firstElem = array[0];
+    int length = array.getSize();
+
+    ASSERT_TRUE(firstElem == 1 && length == 1);
+}
+
+TEST(ArrayTest, Copy) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+
+    Array<int> copyArray{array};
+
+    int firstElem = copyArray[0];
+    int secondElem = copyArray[1];
+    int length = copyArray.getSize();
+
+    int firstElemSrc = array[0];
+    int secondElemSrc = array[1];
+    int lengthSrc = array.getSize();    
+    bool result = firstElem == 1 && secondElem == 2 && length == 2 && firstElemSrc == 1 && secondElemSrc == 2 && lengthSrc == 2;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(ArrayTest, Move) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+
+    Array<int> copyArray{std::move(array)};
+
+    int firstElem = copyArray[0];
+    int secondElem = copyArray[1];
+    int length = copyArray.getSize();
+    int lengthSrc = array.getSize();    
+
+   bool result = firstElem == 1 && secondElem == 2 && length == 2 && lengthSrc == 0;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(ArrayTest, Assigment) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+
+    Array<int> copyArray = array;
+
+    int firstElem = copyArray[0];
+    int secondElem = copyArray[1];
+    int length = copyArray.getSize();
+
+    int firstElemSrc = array[0];
+    int secondElemSrc = array[1];
+    int lengthSrc = array.getSize();    
+   bool result = firstElem == 1 && secondElem == 2 && length == 2 && firstElemSrc == 1 && secondElemSrc == 2 && lengthSrc == 2;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(ArrayTest, AssigmentMove) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+
+    Array<int> copyArray = std::move(array);
+
+    int firstElem = copyArray[0];
+    int secondElem = copyArray[1];
+    int length = copyArray.getSize();
+    int lengthSrc = array.getSize();    
+   bool result = (firstElem == 1 && secondElem == 2 && length == 2 && lengthSrc == 0);
+    ASSERT_TRUE(result == true); 
+}
+
+TEST(ArrayTest, PointerDestruction) {
+    struct A {
+        bool *flagAddr;
+
+        A (bool *addr) : flagAddr{addr} {}
+
+        ~A () {
+            *flagAddr = true;
+        }
+    };   
+
+    bool destructed = false;
+
+    {
+        Array<A*> array;
+        array.append(new A(&destructed));
+    }
+    bool = destructed;
+    ASSERT_TRUE(result == true);
+}
+
+TEST(ArrayTest, CmpEqual) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+
+    Array<int> array2;
+
+    array2.append(1);
+    array2.append(2);
+
+    bool result = array == array2;
+
+    ASSERT_TRUE(result == true);
+}
+
+TEST(ArrayTest, CmpEqualFalse) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(3);
+    array.append(3);
+
+    Array<int> array2;
+
+    array2.append(1);
+    array2.append(2);
+    array2.append(3);
+
+    bool result = array == array2;
+
+    ASSERT_TRUE(result == false);
+}
+
+TEST(ArrayTest, CmpEqualLength) {
+    Array<int> array;
+
+    array.append(1);
+    array.append(2);
+    array.append(3);
+
+    Array<int> array2;
+
+    array2.append(1);
+    array2.append(2);
+
+    bool result = array == array2;
+
+    ASSERT_TRUE(result == false);
+}
 
 int main(int argc, char **argv)
 {

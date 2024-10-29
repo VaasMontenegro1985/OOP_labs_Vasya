@@ -21,7 +21,8 @@ class Trapezoid : public Figure<T>
                 Point<T> cd = cPoint - dPoint;
                 Point<T> ad = aPoint - dPoint;
                 if (!(Utils::eqDouble(ab.abs() + cd.abs(), bc.abs()+ ad.abs())))
-                {
+                {   
+                    std::cout << ab.abs() << " " << cd.abs() << " " << bc.abs() << " " << ad.abs() << std::endl;
                     throw std::invalid_argument("Invalid coordinates, it can't be inscribed into a circle");
                 }
             };
@@ -40,7 +41,7 @@ class Trapezoid : public Figure<T>
             {
                 throw std::invalid_argument("Invalid coordinates, it can't be a Trapezoid");
             }
-            isInscribed(aPoint, bPoint, cPoint, dPoint);
+            isIsosceles(aPoint, bPoint, cPoint, dPoint);
         };
         void isIsosceles(Point<T> aPoint, Point<T> bPoint, Point<T> cPoint, Point<T> dPoint)
         {
@@ -50,7 +51,7 @@ class Trapezoid : public Figure<T>
             Point<T> ad = aPoint - dPoint;
             if ((!Utils::eqDouble(ab.abs(), cd.abs())) && (!Utils::eqDouble(bc.abs(), ad.abs())))
             {
-                throw std::invalid_argument("Invalid coordinates, center can't be found");
+                throw std::invalid_argument("Invalid coordinates, it can't be inscribed into a circle");
             }
         };
     protected:
@@ -66,7 +67,7 @@ class Trapezoid : public Figure<T>
             std::cout << "\tInput d: ";
             is >> Pointd;
             std::cout << std::endl;
-            check(a, b, c, d);
+            check(Pointa, Pointb, Pointc, Pointd);
             *a = Pointa;
             *b = Pointb;
             *c = Pointc;
@@ -145,10 +146,13 @@ class Trapezoid : public Figure<T>
         }
 
 
-        Point<T> calcCentrRotation() override
+        Point<double> calcCentrRotation() override
         {
-            isIsosceles(*a, *b, *c, *d);
-            Point<double> CentrRotation = (*a + *b + *c + *d) * (1.0 / 4.0);
+            Point<double> aDouble(a->getX(),a->getY());
+            Point<double> bDouble(b->getX(),b->getY());
+            Point<double> cDouble(c->getX(),c->getY());
+            Point<double> dDouble(d->getX(),d->getY());
+            Point<double> CentrRotation = (aDouble + bDouble + cDouble + dDouble) * (1.0 / 4.0);
             return CentrRotation;
         };
 
