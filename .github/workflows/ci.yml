@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        lab: [lab2, lab3, lab4]
+        lab: [lab2, lab3, lab4, lab5]
     
     steps:
       - name: Checkout Repository

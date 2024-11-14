@@ -3,7 +3,7 @@
 #include "../include/allocator.h"
 #include "../include/list.h"
 
-TEST(allocator, alloc_empty) { 
+TEST(Allocator, alloc_empty) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -21,7 +21,7 @@ TEST(allocator, alloc_empty) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(allocator, alloc_some) { 
+TEST(Allocator, alloc_some) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -40,7 +40,7 @@ TEST(allocator, alloc_some) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(allocator, alloc_begin) { 
+TEST(Allocator, alloc_begin) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -66,7 +66,7 @@ TEST(allocator, alloc_begin) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(allocator, alloc_end) { 
+TEST(Allocator, alloc_end) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -88,7 +88,7 @@ TEST(allocator, alloc_end) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(allocator, alloc_middle) { 
+TEST(Allocator, alloc_middle) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -116,7 +116,7 @@ TEST(allocator, alloc_middle) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(allocator, dealloc) { 
+TEST(Allocator, dealloc) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -137,7 +137,7 @@ TEST(allocator, dealloc) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(allocator, dealloc_some) { 
+TEST(Allocator, dealloc_some) { 
     struct Item { 
         int *counter; 
         Item (int *counterVal) : counter{counterVal} { ++(*counter); } 
@@ -146,7 +146,7 @@ TEST(allocator, dealloc_some) {
     int counter = 0; 
  
     StaticStruct<1024> resource;
-std::pmr::polymorphic_allocator<Item> allocator(&resource); 
+    std::pmr::polymorphic_allocator<Item> allocator(&resource); 
  
     auto itemP = allocator.allocate(5); 
  
@@ -164,7 +164,7 @@ std::pmr::polymorphic_allocator<Item> allocator(&resource);
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(list, create_empty) { 
+TEST(List, create_empty) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -173,7 +173,7 @@ TEST(list, create_empty) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(list, push_back_not_empty) { 
+TEST(List, push_back_not_empty) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -184,7 +184,7 @@ TEST(list, push_back_not_empty) {
     ASSERT_TRUE(result == false); 
 }
  
-TEST(list, pop_back) { 
+TEST(List, pop_back) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -196,8 +196,32 @@ TEST(list, pop_back) {
  
     ASSERT_TRUE(result == true); 
 } 
+
+TEST(List, push_front_not_empty) { 
+    StaticStruct<1024> resource; 
+    ListAllocator<int> allocator(&resource); 
+    LinkedList<int> list(allocator); 
  
-TEST(list, iterators) { 
+    list.push_front(0); 
+    bool result = list.empty(); 
+ 
+    ASSERT_TRUE(result == false); 
+}
+ 
+TEST(List, pop_back) { 
+    StaticStruct<1024> resource; 
+    ListAllocator<int> allocator(&resource); 
+    LinkedList<int> list(allocator); 
+ 
+    list.push_front(1); 
+    list.pop_front();
+ 
+    bool result = list.empty(); 
+ 
+    ASSERT_TRUE(result == true); 
+} 
+
+TEST(List, iterators) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -223,30 +247,55 @@ TEST(list, iterators) {
 } 
  
 
-TEST(list, equal) { 
+TEST(List, empty_equal) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
     LinkedList<int> list2(allocator); 
  
-    bool emptyEqual = list == list2; 
+    bool result = list == list2;
+
+    ASSERT_TRUE(result == true); 
+}
+
+
+TEST(List, equal) { 
+    StaticStruct<1024> resource; 
+    ListAllocator<int> allocator(&resource); 
+    LinkedList<int> list(allocator); 
+    LinkedList<int> list2(allocator);
  
     list.push_back(0); 
     list.push_back(1); 
-    list.push_back(2); 
+    list.push_back(2);
+    list.push_front(3);
  
     list2.push_back(0); 
     list2.push_back(1); 
-    list2.push_back(2); 
+    list2.push_back(2);
+    list2.push_front(3);
  
-    bool sameEqual = list == list2; 
+    bool result = list == list2;
  
+    ASSERT_TRUE(result == true); 
+} 
+
+
+TEST(List, not_equal) { 
+    StaticStruct<1024> resource; 
+    ListAllocator<int> allocator(&resource); 
+    LinkedList<int> list(allocator); 
+    LinkedList<int> list2(allocator); 
+ 
+    bool emptyEqual 
+ 
+    list.push_back(0); 
+ 
+    list2.push_back(0);
     list2.push_back(3); 
  
-    bool notSameNotEqual = list != list2; 
- 
-    bool result = emptyEqual && sameEqual && notSameNotEqual; 
- 
+    bool result = list != list2;
+    
     ASSERT_TRUE(result == true); 
 } 
 

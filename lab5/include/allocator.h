@@ -37,6 +37,7 @@ class StaticStruct : public std::pmr::memory_resource
         }
         throw std::bad_alloc();
     }
+    
     void do_deallocate(void *ptr, size_t bytes, size_t alignment) override
     {
         unsigned char* block = static_cast<unsigned char*>(ptr);
