@@ -3,6 +3,17 @@
 #include "../include/allocator.h"
 #include "../include/list.h"
 
+
+TEST(Allocator, bad_alloc) {
+ 
+    StaticStruct<1> resource; 
+    std::pmr::polymorphic_allocator<int> allocator(&resource);
+    
+    EXPECT_THROW({
+    auto itemP = allocator.allocate(10000);}, std::bad_alloc);
+} 
+ 
+
 TEST(Allocator, alloc_empty) { 
     struct Item { 
         int *counter; 

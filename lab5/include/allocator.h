@@ -13,7 +13,8 @@ class StaticStruct : public std::pmr::memory_resource
         std::map<unsigned char*, size_t> allocatedBlocks;
     public:
         void *do_allocate(size_t bytes, size_t alignment) override{
-        if(allocatedBlocks.empty()){
+        if (bytes > sizePool) throw std::bad_alloc();
+        if(allocatedBlocks.empty() && (bytes <= sizePool)){
             allocatedBlocks[pool] = bytes;
         //    std::cout << "Alloc: " << static_cast<void*>(pool) << std::endl;
             return pool;}
