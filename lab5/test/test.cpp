@@ -164,7 +164,7 @@ TEST(Allocator, dealloc_some) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(List, create_empty) { 
+TEST(ListTest, create_empty) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -173,7 +173,7 @@ TEST(List, create_empty) {
     ASSERT_TRUE(result == true); 
 } 
  
-TEST(List, push_back_not_empty) { 
+TEST(ListTest, push_back_not_empty) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -184,7 +184,7 @@ TEST(List, push_back_not_empty) {
     ASSERT_TRUE(result == false); 
 }
  
-TEST(List, pop_back) { 
+TEST(ListTest, pop_back) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -197,7 +197,7 @@ TEST(List, pop_back) {
     ASSERT_TRUE(result == true); 
 } 
 
-TEST(List, push_front_not_empty) { 
+TEST(ListTest, push_front_not_empty) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -208,7 +208,7 @@ TEST(List, push_front_not_empty) {
     ASSERT_TRUE(result == false); 
 }
  
-TEST(List, pop_back) { 
+TEST(ListTest, pop_front) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -221,7 +221,7 @@ TEST(List, pop_back) {
     ASSERT_TRUE(result == true); 
 } 
 
-TEST(List, iterators) { 
+TEST(ListTest, iterators) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -247,7 +247,7 @@ TEST(List, iterators) {
 } 
  
 
-TEST(List, empty_equal) { 
+TEST(ListTest, empty_equal) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -259,7 +259,7 @@ TEST(List, empty_equal) {
 }
 
 
-TEST(List, equal) { 
+TEST(ListTest, equal) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
@@ -281,13 +281,11 @@ TEST(List, equal) {
 } 
 
 
-TEST(List, not_equal) { 
+TEST(ListTest, not_equal) { 
     StaticStruct<1024> resource; 
     ListAllocator<int> allocator(&resource); 
     LinkedList<int> list(allocator); 
     LinkedList<int> list2(allocator); 
- 
-    bool emptyEqual 
  
     list.push_back(0); 
  
