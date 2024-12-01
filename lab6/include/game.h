@@ -6,7 +6,11 @@
 #include <set>
 #include <ostream>
 #include <memory>
+#include "factories/FactoryFile.h"
+#include "factories/FactoryRandom.h"
 
+#include "observers/ObserverFile.h"
+#include "observers/ObserverStdout.h"
 class Game
 {
 private:
@@ -15,6 +19,9 @@ private:
     std::size_t mapWidth;
     std::size_t mapHeight;
     NPCSet units;
+
+    std::shared_ptr<ObserverStdout> screenOut{nullptr};
+    std::shared_ptr<ObserverFile> fileOut{nullptr};
 
     NPCSet battle_step (double killdistance);
 public:

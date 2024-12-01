@@ -284,8 +284,16 @@ CMakeFiles/lab6_lib_NPC.dir/src/NPC.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src/N
   /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc \
   /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
   /workspaces/OOP_labs_Vasya/lab6/include/utils.h \
-  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h
+  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/Observer.h \
+  /usr/local/include/c++/14.2.0/list \
+  /usr/local/include/c++/14.2.0/bits/stl_list.h \
+  /usr/local/include/c++/14.2.0/bits/list.tcc
 
+
+/usr/local/include/c++/14.2.0/bits/stl_list.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/Observer.h:
 
 /workspaces/OOP_labs_Vasya/lab6/include/concepts.h:
 
@@ -448,6 +456,8 @@ CMakeFiles/lab6_lib_NPC.dir/src/NPC.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src/N
 /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/ctype_base.h:
 
 /workspaces/OOP_labs_Vasya/lab6/include/npc.h:
+
+/usr/local/include/c++/14.2.0/bits/list.tcc:
 
 /usr/local/include/c++/14.2.0/bits/move.h:
 
@@ -732,6 +742,8 @@ CMakeFiles/lab6_lib_NPC.dir/src/NPC.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src/N
 /usr/include/errno.h:
 
 /usr/local/include/c++/14.2.0/bits/locale_classes.tcc:
+
+/usr/local/include/c++/14.2.0/list:
 
 /usr/local/include/c++/14.2.0/system_error:
 

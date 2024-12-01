@@ -92,12 +92,14 @@ lab6_exe_EXTERNAL_OBJECTS =
 
 lab6_exe: CMakeFiles/lab6_exe.dir/main.cpp.o
 lab6_exe: CMakeFiles/lab6_exe.dir/build.make
-lab6_exe: liblab6_lib_Game.a
+lab6_exe: liblab6_lib_game.a
 lab6_exe: liblab6_lib_FactoryRandom.a
 lab6_exe: liblab6_lib_FactoryFile.a
 lab6_exe: liblab6_lib_vaas.a
 lab6_exe: liblab6_lib_jason.a
 lab6_exe: liblab6_lib_buck.a
+lab6_exe: liblab6_lib_ObserverStdout.a
+lab6_exe: liblab6_lib_ObserverFile.a
 lab6_exe: liblab6_lib_NPC.a
 lab6_exe: liblab6_lib_utils.a
 lab6_exe: CMakeFiles/lab6_exe.dir/link.txt

@@ -253,17 +253,43 @@ lab6_lib_FactoryFile/fast:
 .PHONY : lab6_lib_FactoryFile/fast
 
 #=============================================================================
-# Target rules for targets named lab6_lib_Game
+# Target rules for targets named lab6_lib_ObserverStdout
 
 # Build rule for target.
-lab6_lib_Game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab6_lib_Game
-.PHONY : lab6_lib_Game
+lab6_lib_ObserverStdout: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab6_lib_ObserverStdout
+.PHONY : lab6_lib_ObserverStdout
 
 # fast build rule for target.
-lab6_lib_Game/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_Game.dir/build.make CMakeFiles/lab6_lib_Game.dir/build
-.PHONY : lab6_lib_Game/fast
+lab6_lib_ObserverStdout/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverStdout.dir/build.make CMakeFiles/lab6_lib_ObserverStdout.dir/build
+.PHONY : lab6_lib_ObserverStdout/fast
+
+#=============================================================================
+# Target rules for targets named lab6_lib_ObserverFile
+
+# Build rule for target.
+lab6_lib_ObserverFile: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab6_lib_ObserverFile
+.PHONY : lab6_lib_ObserverFile
+
+# fast build rule for target.
+lab6_lib_ObserverFile/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverFile.dir/build.make CMakeFiles/lab6_lib_ObserverFile.dir/build
+.PHONY : lab6_lib_ObserverFile/fast
+
+#=============================================================================
+# Target rules for targets named lab6_lib_game
+
+# Build rule for target.
+lab6_lib_game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab6_lib_game
+.PHONY : lab6_lib_game
+
+# fast build rule for target.
+lab6_lib_game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_game.dir/build.make CMakeFiles/lab6_lib_game.dir/build
+.PHONY : lab6_lib_game/fast
 
 #=============================================================================
 # Target rules for targets named lab6_exe
@@ -353,30 +379,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_exe.dir/build.make CMakeFiles/lab6_exe.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/Game.o: src/Game.cpp.o
-.PHONY : src/Game.o
-
-# target to build an object file
-src/Game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_Game.dir/build.make CMakeFiles/lab6_lib_Game.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
-
-src/Game.i: src/Game.cpp.i
-.PHONY : src/Game.i
-
-# target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_Game.dir/build.make CMakeFiles/lab6_lib_Game.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
-
-src/Game.s: src/Game.cpp.s
-.PHONY : src/Game.s
-
-# target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_Game.dir/build.make CMakeFiles/lab6_lib_Game.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
 
 src/NPC.o: src/NPC.cpp.o
 .PHONY : src/NPC.o
@@ -474,6 +476,30 @@ src/factories/FactoryRandom.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_FactoryRandom.dir/build.make CMakeFiles/lab6_lib_FactoryRandom.dir/src/factories/FactoryRandom.cpp.s
 .PHONY : src/factories/FactoryRandom.cpp.s
 
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_game.dir/build.make CMakeFiles/lab6_lib_game.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
+
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_game.dir/build.make CMakeFiles/lab6_lib_game.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_game.dir/build.make CMakeFiles/lab6_lib_game.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
+
 src/jason.o: src/jason.cpp.o
 .PHONY : src/jason.o
 
@@ -497,6 +523,54 @@ src/jason.s: src/jason.cpp.s
 src/jason.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_jason.dir/build.make CMakeFiles/lab6_lib_jason.dir/src/jason.cpp.s
 .PHONY : src/jason.cpp.s
+
+src/observers/ObserverFile.o: src/observers/ObserverFile.cpp.o
+.PHONY : src/observers/ObserverFile.o
+
+# target to build an object file
+src/observers/ObserverFile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverFile.dir/build.make CMakeFiles/lab6_lib_ObserverFile.dir/src/observers/ObserverFile.cpp.o
+.PHONY : src/observers/ObserverFile.cpp.o
+
+src/observers/ObserverFile.i: src/observers/ObserverFile.cpp.i
+.PHONY : src/observers/ObserverFile.i
+
+# target to preprocess a source file
+src/observers/ObserverFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverFile.dir/build.make CMakeFiles/lab6_lib_ObserverFile.dir/src/observers/ObserverFile.cpp.i
+.PHONY : src/observers/ObserverFile.cpp.i
+
+src/observers/ObserverFile.s: src/observers/ObserverFile.cpp.s
+.PHONY : src/observers/ObserverFile.s
+
+# target to generate assembly for a file
+src/observers/ObserverFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverFile.dir/build.make CMakeFiles/lab6_lib_ObserverFile.dir/src/observers/ObserverFile.cpp.s
+.PHONY : src/observers/ObserverFile.cpp.s
+
+src/observers/ObserverStdout.o: src/observers/ObserverStdout.cpp.o
+.PHONY : src/observers/ObserverStdout.o
+
+# target to build an object file
+src/observers/ObserverStdout.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverStdout.dir/build.make CMakeFiles/lab6_lib_ObserverStdout.dir/src/observers/ObserverStdout.cpp.o
+.PHONY : src/observers/ObserverStdout.cpp.o
+
+src/observers/ObserverStdout.i: src/observers/ObserverStdout.cpp.i
+.PHONY : src/observers/ObserverStdout.i
+
+# target to preprocess a source file
+src/observers/ObserverStdout.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverStdout.dir/build.make CMakeFiles/lab6_lib_ObserverStdout.dir/src/observers/ObserverStdout.cpp.i
+.PHONY : src/observers/ObserverStdout.cpp.i
+
+src/observers/ObserverStdout.s: src/observers/ObserverStdout.cpp.s
+.PHONY : src/observers/ObserverStdout.s
+
+# target to generate assembly for a file
+src/observers/ObserverStdout.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_ObserverStdout.dir/build.make CMakeFiles/lab6_lib_ObserverStdout.dir/src/observers/ObserverStdout.cpp.s
+.PHONY : src/observers/ObserverStdout.cpp.s
 
 src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
@@ -565,18 +639,17 @@ help:
 	@echo "... lab6_exe"
 	@echo "... lab6_lib_FactoryFile"
 	@echo "... lab6_lib_FactoryRandom"
-	@echo "... lab6_lib_Game"
 	@echo "... lab6_lib_NPC"
+	@echo "... lab6_lib_ObserverFile"
+	@echo "... lab6_lib_ObserverStdout"
 	@echo "... lab6_lib_buck"
+	@echo "... lab6_lib_game"
 	@echo "... lab6_lib_jason"
 	@echo "... lab6_lib_utils"
 	@echo "... lab6_lib_vaas"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
 	@echo "... src/NPC.o"
 	@echo "... src/NPC.i"
 	@echo "... src/NPC.s"
@@ -589,9 +662,18 @@ help:
 	@echo "... src/factories/FactoryRandom.o"
 	@echo "... src/factories/FactoryRandom.i"
 	@echo "... src/factories/FactoryRandom.s"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
 	@echo "... src/jason.o"
 	@echo "... src/jason.i"
 	@echo "... src/jason.s"
+	@echo "... src/observers/ObserverFile.o"
+	@echo "... src/observers/ObserverFile.i"
+	@echo "... src/observers/ObserverFile.s"
+	@echo "... src/observers/ObserverStdout.o"
+	@echo "... src/observers/ObserverStdout.i"
+	@echo "... src/observers/ObserverStdout.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

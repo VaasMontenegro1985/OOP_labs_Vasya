@@ -1,5 +1,7 @@
 #pragma once
 #include "npc.h"
+#include "buck.h"
+#include "jason.h"
 
 class Vaas : public NPC
 {   

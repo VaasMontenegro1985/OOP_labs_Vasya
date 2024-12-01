@@ -10,14 +10,17 @@ size_t Vaas::getCount(){
 };
 
 bool Vaas::fight(const Vaas &other) {
+   fightNotify(other.getName(), true);
    return true;
 }
 
 bool Vaas::fight(const Jason &other) {
+   fightNotify(other.getName(), true);
    return true;
 }
 
 bool Vaas::fight(const Buck &other) {
+   fightNotify(other.getName(), false);
    return false;
 }
 
@@ -27,7 +30,7 @@ bool Vaas::accept (std::shared_ptr<NPC> other) {
 
 std::ostream& Vaas::print (std::ostream &os) {
    os << getName();
-   os << " Vaas on position: ";
+   os << " on position: ";
    os << getCoords();
    os << std::endl;
    return os;

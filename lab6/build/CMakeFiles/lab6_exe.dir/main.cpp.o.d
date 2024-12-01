@@ -261,19 +261,29 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: \
  /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  /workspaces/OOP_labs_Vasya/lab6/include/utils.h \
  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h \
+ /workspaces/OOP_labs_Vasya/lab6/include/Observer.h \
+ /usr/local/include/c++/14.2.0/list \
+ /usr/local/include/c++/14.2.0/bits/stl_list.h \
+ /usr/local/include/c++/14.2.0/bits/list.tcc \
  /workspaces/OOP_labs_Vasya/lab6/include/vaas.h \
  /workspaces/OOP_labs_Vasya/lab6/include/buck.h \
  /workspaces/OOP_labs_Vasya/lab6/include/jason.h \
+ /workspaces/OOP_labs_Vasya/lab6/include/game.h \
+ /workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryFile.h \
+ /workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryRandom.h \
+ /usr/local/include/c++/14.2.0/stdlib.h \
+ /usr/local/include/c++/14.2.0/vector \
+ /usr/local/include/c++/14.2.0/bits/stl_vector.h \
+ /usr/local/include/c++/14.2.0/bits/stl_bvector.h \
+ /usr/local/include/c++/14.2.0/bits/vector.tcc \
+ /workspaces/OOP_labs_Vasya/lab6/include/observers/ObserverFile.h \
+ /workspaces/OOP_labs_Vasya/lab6/include/observers/ObserverStdout.h \
  /usr/local/include/c++/14.2.0/chrono \
  /usr/local/include/c++/14.2.0/bits/chrono.h \
  /usr/local/include/c++/14.2.0/ratio /usr/local/include/c++/14.2.0/ctime \
  /usr/local/include/c++/14.2.0/bits/parse_numbers.h \
  /usr/local/include/c++/14.2.0/sstream \
  /usr/local/include/c++/14.2.0/bits/sstream.tcc \
- /usr/local/include/c++/14.2.0/vector \
- /usr/local/include/c++/14.2.0/bits/stl_vector.h \
- /usr/local/include/c++/14.2.0/bits/stl_bvector.h \
- /usr/local/include/c++/14.2.0/bits/vector.tcc \
  /usr/local/include/c++/14.2.0/bits/stl_algo.h \
  /usr/local/include/c++/14.2.0/bits/algorithmfwd.h \
  /usr/local/include/c++/14.2.0/bits/stl_heap.h \
@@ -294,5 +304,4 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: \
  /usr/local/include/c++/14.2.0/bits/enable_special_members.h \
  /usr/local/include/c++/14.2.0/span /usr/local/include/c++/14.2.0/variant \
  /usr/local/include/c++/14.2.0/bits/unicode.h \
- /usr/local/include/c++/14.2.0/bits/unicode-data.h \
- /workspaces/OOP_labs_Vasya/lab6/include/Game.h
+ /usr/local/include/c++/14.2.0/bits/unicode-data.h

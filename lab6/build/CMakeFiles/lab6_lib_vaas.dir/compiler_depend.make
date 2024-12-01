@@ -285,8 +285,18 @@ CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src
   /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc \
   /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
   /workspaces/OOP_labs_Vasya/lab6/include/utils.h \
-  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h
+  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/Observer.h \
+  /usr/local/include/c++/14.2.0/list \
+  /usr/local/include/c++/14.2.0/bits/stl_list.h \
+  /usr/local/include/c++/14.2.0/bits/list.tcc \
+  /workspaces/OOP_labs_Vasya/lab6/include/buck.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/jason.h
 
+
+/usr/local/include/c++/14.2.0/bits/stl_list.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/Observer.h:
 
 /workspaces/OOP_labs_Vasya/lab6/include/concepts.h:
 
@@ -432,6 +442,8 @@ CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src
 
 /workspaces/OOP_labs_Vasya/lab6/include/npc.h:
 
+/usr/local/include/c++/14.2.0/bits/list.tcc:
+
 /usr/local/include/c++/14.2.0/bits/move.h:
 
 /usr/local/include/c++/14.2.0/bits/allocated_ptr.h:
@@ -553,6 +565,8 @@ CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src
 /usr/local/include/c++/14.2.0/tr1/special_function_util.h:
 
 /usr/local/include/c++/14.2.0/new:
+
+/workspaces/OOP_labs_Vasya/lab6/include/jason.h:
 
 /usr/local/include/c++/14.2.0/cwchar:
 
@@ -740,6 +754,8 @@ CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src
 
 /usr/local/include/c++/14.2.0/bits/locale_classes.tcc:
 
+/usr/local/include/c++/14.2.0/list:
+
 /usr/local/include/c++/14.2.0/system_error:
 
 /usr/local/include/c++/14.2.0/bits/memory_resource.h:
@@ -819,6 +835,8 @@ CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.o: /workspaces/OOP_labs_Vasya/lab6/src
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/buck.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 

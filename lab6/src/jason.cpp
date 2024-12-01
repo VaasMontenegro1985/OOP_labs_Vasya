@@ -11,14 +11,17 @@ size_t Jason::getCount(){
 };
 
 bool Jason::fight (const Jason &other) {
+    fightNotify(other.getName(), false);
     return false;
 }
 
 bool Jason::fight (const Vaas &other) {
+    fightNotify(other.getName(), false);
     return false;
 }
 
 bool Jason::fight (const Buck &other) {
+    fightNotify(other.getName(), true);
     return true;
 }
 
@@ -28,7 +31,7 @@ bool Jason::accept (std::shared_ptr<NPC> other) {
 
 std::ostream& Jason::print (std::ostream &os) {
    os << getName();
-   os << " Jason on position: ";
+   os << " on position: ";
    os << getCoords();
    os << std::endl;
 

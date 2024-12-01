@@ -263,6 +263,10 @@ CMakeFiles/lab6_lib_FactoryRandom.dir/src/factories/FactoryRandom.cpp.o: \
  /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  /workspaces/OOP_labs_Vasya/lab6/src/factories/../../include/factories/../utils.h \
  /workspaces/OOP_labs_Vasya/lab6/src/factories/../../include/factories/../concepts.h \
+ /workspaces/OOP_labs_Vasya/lab6/src/factories/../../include/factories/../Observer.h \
+ /usr/local/include/c++/14.2.0/list \
+ /usr/local/include/c++/14.2.0/bits/stl_list.h \
+ /usr/local/include/c++/14.2.0/bits/list.tcc \
  /workspaces/OOP_labs_Vasya/lab6/src/factories/../../include/factories/../vaas.h \
  /workspaces/OOP_labs_Vasya/lab6/src/factories/../../include/factories/../buck.h \
  /workspaces/OOP_labs_Vasya/lab6/src/factories/../../include/factories/../jason.h \

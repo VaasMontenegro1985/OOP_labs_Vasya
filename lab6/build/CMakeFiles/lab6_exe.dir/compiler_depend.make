@@ -285,12 +285,106 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
   /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
   /workspaces/OOP_labs_Vasya/lab6/include/utils.h \
   /workspaces/OOP_labs_Vasya/lab6/include/concepts.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/Observer.h \
+  /usr/local/include/c++/14.2.0/list \
+  /usr/local/include/c++/14.2.0/bits/stl_list.h \
+  /usr/local/include/c++/14.2.0/bits/list.tcc \
   /workspaces/OOP_labs_Vasya/lab6/include/vaas.h \
   /workspaces/OOP_labs_Vasya/lab6/include/buck.h \
-  /workspaces/OOP_labs_Vasya/lab6/include/jason.h
+  /workspaces/OOP_labs_Vasya/lab6/include/jason.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/game.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryFile.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryRandom.h \
+  /usr/local/include/c++/14.2.0/stdlib.h \
+  /usr/local/include/c++/14.2.0/vector \
+  /usr/local/include/c++/14.2.0/bits/stl_vector.h \
+  /usr/local/include/c++/14.2.0/bits/stl_bvector.h \
+  /usr/local/include/c++/14.2.0/bits/vector.tcc \
+  /workspaces/OOP_labs_Vasya/lab6/include/observers/ObserverFile.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/observers/ObserverStdout.h \
+  /usr/local/include/c++/14.2.0/chrono \
+  /usr/local/include/c++/14.2.0/bits/chrono.h \
+  /usr/local/include/c++/14.2.0/ratio \
+  /usr/local/include/c++/14.2.0/ctime \
+  /usr/local/include/c++/14.2.0/bits/parse_numbers.h \
+  /usr/local/include/c++/14.2.0/sstream \
+  /usr/local/include/c++/14.2.0/bits/sstream.tcc \
+  /usr/local/include/c++/14.2.0/bits/stl_algo.h \
+  /usr/local/include/c++/14.2.0/bits/algorithmfwd.h \
+  /usr/local/include/c++/14.2.0/bits/stl_heap.h \
+  /usr/local/include/c++/14.2.0/bits/uniform_int_dist.h \
+  /usr/local/include/c++/14.2.0/bits/chrono_io.h \
+  /usr/local/include/c++/14.2.0/iomanip \
+  /usr/local/include/c++/14.2.0/locale \
+  /usr/local/include/c++/14.2.0/bits/locale_facets_nonio.h \
+  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/time_members.h \
+  /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/local/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+  /usr/local/include/c++/14.2.0/bits/locale_conv.h \
+  /usr/local/include/c++/14.2.0/bits/quoted_string.h \
+  /usr/local/include/c++/14.2.0/format \
+  /usr/local/include/c++/14.2.0/array \
+  /usr/local/include/c++/14.2.0/charconv \
+  /usr/local/include/c++/14.2.0/optional \
+  /usr/local/include/c++/14.2.0/bits/enable_special_members.h \
+  /usr/local/include/c++/14.2.0/span \
+  /usr/local/include/c++/14.2.0/variant \
+  /usr/local/include/c++/14.2.0/bits/unicode.h \
+  /usr/local/include/c++/14.2.0/bits/unicode-data.h
 
+
+/usr/local/include/c++/14.2.0/bits/unicode-data.h:
+
+/usr/local/include/c++/14.2.0/bits/unicode.h:
+
+/usr/local/include/c++/14.2.0/variant:
+
+/usr/local/include/c++/14.2.0/optional:
+
+/usr/local/include/c++/14.2.0/bits/quoted_string.h:
+
+/usr/local/include/c++/14.2.0/bits/locale_facets_nonio.tcc:
+
+/usr/include/libintl.h:
+
+/usr/local/include/c++/14.2.0/locale:
+
+/usr/local/include/c++/14.2.0/iomanip:
+
+/usr/local/include/c++/14.2.0/bits/algorithmfwd.h:
+
+/usr/local/include/c++/14.2.0/bits/stl_algo.h:
+
+/usr/local/include/c++/14.2.0/bits/sstream.tcc:
+
+/usr/local/include/c++/14.2.0/sstream:
+
+/usr/local/include/c++/14.2.0/ctime:
+
+/usr/local/include/c++/14.2.0/chrono:
+
+/workspaces/OOP_labs_Vasya/lab6/include/observers/ObserverStdout.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/observers/ObserverFile.h:
+
+/usr/local/include/c++/14.2.0/bits/vector.tcc:
+
+/usr/local/include/c++/14.2.0/bits/stl_vector.h:
+
+/usr/local/include/c++/14.2.0/vector:
+
+/usr/local/include/c++/14.2.0/stdlib.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryRandom.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryFile.h:
 
 /workspaces/OOP_labs_Vasya/lab6/include/vaas.h:
+
+/usr/local/include/c++/14.2.0/bits/stl_list.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/Observer.h:
 
 /workspaces/OOP_labs_Vasya/lab6/include/concepts.h:
 
@@ -301,6 +395,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc:
 
 /usr/local/include/c++/14.2.0/tr1/legendre_function.tcc:
+
+/usr/local/include/c++/14.2.0/bits/chrono.h:
 
 /usr/local/include/c++/14.2.0/tr1/hypergeometric.tcc:
 
@@ -313,6 +409,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/local/include/c++/14.2.0/charconv:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
@@ -328,6 +426,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/local/include/c++/14.2.0/bits/stl_pair.h:
 
+/usr/local/include/c++/14.2.0/bits/locale_conv.h:
+
 /usr/local/include/c++/14.2.0/bits/stl_function.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
@@ -335,6 +435,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/bits/stl_iterator.h:
 
 /usr/local/include/c++/14.2.0/bits/shared_ptr_atomic.h:
+
+/usr/local/include/c++/14.2.0/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -345,6 +447,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/string:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/time_members.h:
 
 /usr/local/include/c++/14.2.0/bits/locale_classes.h:
 
@@ -400,6 +504,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+/usr/local/include/c++/14.2.0/bits/uniform_int_dist.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/gthr-default.h:
@@ -433,6 +539,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/bits/localefwd.h:
 
 /usr/local/lib/gcc/x86_64-linux-gnu/14.2.0/include/stddef.h:
+
+/usr/local/include/c++/14.2.0/array:
 
 /usr/local/include/c++/14.2.0/ext/numeric_traits.h:
 
@@ -468,7 +576,11 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/c++allocator.h:
 
+/usr/local/include/c++/14.2.0/ratio:
+
 /usr/local/include/c++/14.2.0/bits/requires_hosted.h:
+
+/usr/local/include/c++/14.2.0/bits/chrono_io.h:
 
 /usr/include/features.h:
 
@@ -483,6 +595,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/bits/stl_tree.h:
 
 /usr/local/include/c++/14.2.0/clocale:
+
+/usr/local/include/c++/14.2.0/bits/list.tcc:
 
 /usr/local/include/c++/14.2.0/bits/move.h:
 
@@ -520,6 +634,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/local/include/c++/14.2.0/bits/char_traits.h:
 
+/usr/local/include/c++/14.2.0/span:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
@@ -552,6 +668,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
+/usr/local/include/c++/14.2.0/bits/locale_facets_nonio.h:
+
 /usr/local/include/c++/14.2.0/bits/ostream_insert.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -569,6 +687,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/tr1/gamma.tcc:
 
 /usr/local/include/c++/14.2.0/bits/ranges_algobase.h:
+
+/usr/local/include/c++/14.2.0/x86_64-linux-gnu/bits/messages_members.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -605,6 +725,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/bit:
 
 /usr/local/include/c++/14.2.0/bits/ranges_uninitialized.h:
+
+/usr/local/include/c++/14.2.0/format:
 
 /usr/local/include/c++/14.2.0/iostream:
 
@@ -728,6 +850,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/local/include/c++/14.2.0/bits/locale_classes.tcc:
 
+/usr/local/include/c++/14.2.0/list:
+
 /usr/local/include/c++/14.2.0/system_error:
 
 /usr/local/include/c++/14.2.0/bits/memory_resource.h:
@@ -745,6 +869,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/ios:
 
 /usr/local/include/c++/14.2.0/cwctype:
+
+/usr/local/include/c++/14.2.0/bits/parse_numbers.h:
 
 /usr/local/include/c++/14.2.0/bits/locale_facets.tcc:
 
@@ -765,6 +891,8 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 /usr/local/include/c++/14.2.0/bits/stl_raw_storage_iter.h:
 
 /usr/include/x86_64-linux-gnu/bits/syscall.h:
+
+/usr/local/include/c++/14.2.0/bits/enable_special_members.h:
 
 /usr/local/include/c++/14.2.0/bits/align.h:
 
@@ -828,9 +956,13 @@ CMakeFiles/lab6_exe.dir/main.cpp.o: /workspaces/OOP_labs_Vasya/lab6/main.cpp \
 
 /usr/local/include/c++/14.2.0/math.h:
 
+/usr/local/include/c++/14.2.0/bits/stl_heap.h:
+
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/local/include/c++/14.2.0/backward/auto_ptr.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/game.h:
 
 /usr/local/include/c++/14.2.0/bits/max_size_type.h:
 

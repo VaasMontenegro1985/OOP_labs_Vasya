@@ -30,10 +30,10 @@ add_library(${CMAKE_PROJECT_NAME}_lib_buck src/buck.cpp)
 add_library(${CMAKE_PROJECT_NAME}_lib_FactoryRandom src/factories/FactoryRandom.cpp)
 add_library(${CMAKE_PROJECT_NAME}_lib_FactoryFile src/factories/FactoryFile.cpp)
 
-# add_library(${CMAKE_PROJECT_NAME}_lib_ObserverStdout src/observers/ObserverStdout.cpp)
-# add_library(${CMAKE_PROJECT_NAME}_lib_ObserverFile src/observers/ObserverFile.cpp)
+add_library(${CMAKE_PROJECT_NAME}_lib_ObserverStdout src/observers/ObserverStdout.cpp)
+add_library(${CMAKE_PROJECT_NAME}_lib_ObserverFile src/observers/ObserverFile.cpp)
 
-add_library(${CMAKE_PROJECT_NAME}_lib_Game src/Game.cpp)
+add_library(${CMAKE_PROJECT_NAME}_lib_game src/game.cpp)
 
 add_executable(${CMAKE_PROJECT_NAME}_exe main.cpp)
 
@@ -60,23 +60,23 @@ target_link_libraries(${CMAKE_PROJECT_NAME}_lib_FactoryFile PRIVATE ${CMAKE_PROJ
 target_link_libraries(${CMAKE_PROJECT_NAME}_lib_FactoryFile PRIVATE ${CMAKE_PROJECT_NAME}_lib_jason)
 target_link_libraries(${CMAKE_PROJECT_NAME}_lib_FactoryFile PRIVATE ${CMAKE_PROJECT_NAME}_lib_buck)
 
-# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverStdout PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
-# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverStdout PRIVATE ${CMAKE_PROJECT_NAME}_lib_NPC)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverStdout PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverStdout PRIVATE ${CMAKE_PROJECT_NAME}_lib_NPC)
 
-# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverFile PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
-# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverFile PRIVATE ${CMAKE_PROJECT_NAME}_lib_NPC)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverFile PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_ObserverFile PRIVATE ${CMAKE_PROJECT_NAME}_lib_NPC)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_NPC)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_vaas)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_jason)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_buck)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_FactoryRandom)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_FactoryFile)
-# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverStdout)
-# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverFile)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_utils)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_NPC)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_vaas)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_jason)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_buck)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_FactoryRandom)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_FactoryFile)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverStdout)
+target_link_libraries(${CMAKE_PROJECT_NAME}_lib_game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverFile)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_Game)
+target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_game)
 
 # Добавление тестов
 # enable_testing()

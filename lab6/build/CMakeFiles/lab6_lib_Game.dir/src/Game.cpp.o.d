@@ -1,5 +1,5 @@
-CMakeFiles/lab6_lib_Game.dir/src/Game.cpp.o: \
- /workspaces/OOP_labs_Vasya/lab6/src/Game.cpp /usr/include/stdc-predef.h \
+CMakeFiles/lab6_lib_game.dir/src/game.cpp.o: \
+ /workspaces/OOP_labs_Vasya/lab6/src/game.cpp /usr/include/stdc-predef.h \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/game.h \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/NPC.h \
  /usr/local/include/c++/14.2.0/set \
@@ -262,13 +262,19 @@ CMakeFiles/lab6_lib_Game.dir/src/Game.cpp.o: \
  /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/utils.h \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/concepts.h \
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/Observer.h \
+ /usr/local/include/c++/14.2.0/list \
+ /usr/local/include/c++/14.2.0/bits/stl_list.h \
+ /usr/local/include/c++/14.2.0/bits/list.tcc \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/vaas.h \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/buck.h \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/jason.h \
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/factories/FactoryFile.h \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/factories/FactoryRandom.h \
  /usr/local/include/c++/14.2.0/stdlib.h \
  /usr/local/include/c++/14.2.0/vector \
  /usr/local/include/c++/14.2.0/bits/stl_vector.h \
  /usr/local/include/c++/14.2.0/bits/stl_bvector.h \
  /usr/local/include/c++/14.2.0/bits/vector.tcc \
- /workspaces/OOP_labs_Vasya/lab6/src/../include/factories/FactoryFile.h
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/observers/ObserverFile.h \
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/observers/ObserverStdout.h

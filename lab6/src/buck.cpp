@@ -10,15 +10,18 @@ size_t Buck::getCount(){
    return count;
 };
 
-bool Buck::fight (const Buck &other){ 
+bool Buck::fight (const Buck &other){
+   fightNotify(other.getName(), false);
    return false; 
 } 
 
-bool Buck::fight (const Jason &other){ 
+bool Buck::fight (const Jason &other){
+   fightNotify(other.getName(), false);
    return false;
 } 
 
-bool Buck::fight (const Vaas &other){ 
+bool Buck::fight (const Vaas &other){
+   fightNotify(other.getName(), false);
    return false; 
 } 
 
@@ -28,7 +31,7 @@ bool Buck::accept (std::shared_ptr<NPC> other){
 
 std::ostream& Buck::print (std::ostream &os){ 
    os << getName();
-   os << " Buck on position: ";
+   os << " on position: ";
    os << getCoords();
    os << std::endl;
 return os; 

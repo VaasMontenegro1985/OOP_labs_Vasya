@@ -285,8 +285,20 @@ CMakeFiles/lab6_lib_jason.dir/src/jason.cpp.o: /workspaces/OOP_labs_Vasya/lab6/s
   /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc \
   /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
   /workspaces/OOP_labs_Vasya/lab6/include/utils.h \
-  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h
+  /workspaces/OOP_labs_Vasya/lab6/include/concepts.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/Observer.h \
+  /usr/local/include/c++/14.2.0/list \
+  /usr/local/include/c++/14.2.0/bits/stl_list.h \
+  /usr/local/include/c++/14.2.0/bits/list.tcc \
+  /workspaces/OOP_labs_Vasya/lab6/include/buck.h \
+  /workspaces/OOP_labs_Vasya/lab6/include/vaas.h
 
+
+/workspaces/OOP_labs_Vasya/lab6/include/vaas.h:
+
+/usr/local/include/c++/14.2.0/bits/stl_list.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/Observer.h:
 
 /workspaces/OOP_labs_Vasya/lab6/include/concepts.h:
 
@@ -429,6 +441,8 @@ CMakeFiles/lab6_lib_jason.dir/src/jason.cpp.o: /workspaces/OOP_labs_Vasya/lab6/s
 /usr/local/include/c++/14.2.0/bits/stl_iterator_base_types.h:
 
 /usr/local/include/c++/14.2.0/bits/erase_if.h:
+
+/usr/local/include/c++/14.2.0/bits/list.tcc:
 
 /usr/local/include/c++/14.2.0/bits/move.h:
 
@@ -740,6 +754,8 @@ CMakeFiles/lab6_lib_jason.dir/src/jason.cpp.o: /workspaces/OOP_labs_Vasya/lab6/s
 
 /usr/local/include/c++/14.2.0/bits/locale_classes.tcc:
 
+/usr/local/include/c++/14.2.0/list:
+
 /usr/local/include/c++/14.2.0/system_error:
 
 /usr/local/include/c++/14.2.0/bits/memory_resource.h:
@@ -819,6 +835,8 @@ CMakeFiles/lab6_lib_jason.dir/src/jason.cpp.o: /workspaces/OOP_labs_Vasya/lab6/s
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/workspaces/OOP_labs_Vasya/lab6/include/buck.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 

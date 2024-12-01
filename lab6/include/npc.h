@@ -4,7 +4,8 @@
 #include <string> 
 #include <memory> 
 #include "point.h" 
- 
+#include "Observer.h"
+
 enum NPCType { 
     Unknown = 0, 
     VaasMontenegro, 
@@ -16,8 +17,22 @@ class NPC;
 class Vaas; 
 class Jason; 
 class Buck; 
+
+struct Murder
+{
+    std::string Murderer;
+    std::string Victim;
+    bool ResultMurder;
+
+    Murder(std::string nameMurderer, std::string nameVictim, bool result){
+        Murderer = nameMurderer;
+        Victim = nameVictim;
+        ResultMurder = result;
+    };
+};
+
  
-class NPC {
+class NPC : public Observable<Murder>{
     private: 
         static std::set<std::string> usedNames; 
  
@@ -25,12 +40,14 @@ class NPC {
         NPCType type; 
         Point<int> coordinates; 
  
+    protected:
+    void fightNotify(std::string nameVictim, bool win);
     public: 
         NPC (NPCType type, std::string name, Point<int> coords); 
 
         virtual ~NPC (); 
 
-        std::string getName();
+        std::string getName() const;
         Point<int> getCoords();
         NPCType getType();
  

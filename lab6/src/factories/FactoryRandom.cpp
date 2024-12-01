@@ -2,46 +2,40 @@
 #include "../../include/factories/FactoryFile.h"
 #include <stdexcept>
 
-std::vector<std::string> FactoryRandom::namesVaasPush(){
-    std::vector<std::string> namesVaasVector;
-    std::ifstream inputFile("../../unicNames/vaas.txt");
-
-    std::string oneName;
-
-    while (std::getline(inputFile, oneName)) {
-        namesVaasVector.push_back(oneName);
-    }
-    inputFile.close();
-
-    return namesVaasVector;
-}
-
-std::vector<std::string> FactoryRandom::namesJasonPush(){
-    std::vector<std::string> namesJasonVector;
-    std::ifstream inputFile("../../unicNames/jason.txt");
-
-    std::string oneName;
-
-    while (std::getline(inputFile, oneName)) {
-        namesJasonVector.push_back(oneName);
-    }
-    inputFile.close();
-
-    return namesJasonVector;
-}
-
-std::vector<std::string> FactoryRandom::namesBuckPush(){
-    std::vector<std::string> namesBuckVector;
-    std::ifstream inputFile("../../unicNames/buck.txt");
-
-    std::string oneName;
-
-    while (std::getline(inputFile, oneName)) {
-        namesBuckVector.push_back(oneName);
-    }
-    inputFile.close();
-
-    return namesBuckVector;
+void FactoryRandom::namesVaasPush(){ 
+    std::ifstream inputFile("../unicNames/vaas.txt"); 
+ 
+    std::string oneName; 
+ 
+    while (!inputFile.eof()) { 
+        std::getline(inputFile, oneName); 
+        namesVaas.push_back(oneName); 
+    } 
+    inputFile.close(); 
+} 
+ 
+void FactoryRandom::namesJasonPush(){ 
+    std::ifstream inputFile("../unicNames/jason.txt"); 
+ 
+    std::string oneName; 
+ 
+    while (!inputFile.eof()) { 
+        std::getline(inputFile, oneName); 
+        namesJason.push_back(oneName); 
+    } 
+    inputFile.close(); 
+} 
+ 
+void FactoryRandom::namesBuckPush(){ 
+    std::ifstream inputFile("../unicNames/buck.txt"); 
+ 
+    std::string oneName; 
+ 
+    while (!inputFile.eof()) { 
+        std::getline(inputFile, oneName); 
+        namesBuck.push_back(oneName); 
+    } 
+    inputFile.close(); 
 }
 
 Point<int> FactoryRandom::getRandomPosition(){
@@ -54,20 +48,25 @@ std::string FactoryRandom::giveName(NPCType type, std::size_t countOfNPCType){
     switch (type)
     {
     case NPCType::VaasMontenegro:
-        return namesVaas[countOfNPCType];
+        return namesVaas[countOfNPCType] + " Vaas";
     
     case NPCType::JasonBrody:
-        return namesJason[countOfNPCType];
+        return namesJason[countOfNPCType] + " Jason";
     
     case NPCType::BuckHughes:
-        return namesBuck[countOfNPCType];
+        return namesBuck[countOfNPCType] + " Buck";
 
     default:
         throw std::logic_error("Unknown NPC type");
     }
 }
 
-FactoryRandom::FactoryRandom(std::size_t width, std::size_t height) : mapWidth{width}, mapHeight{height}{}
+FactoryRandom::FactoryRandom(std::size_t width, std::size_t height) : mapWidth{width}, mapHeight{height}{
+    namesVaasPush();
+    namesJasonPush();
+    namesBuckPush();
+    
+}
 
 std::shared_ptr<NPC> FactoryRandom::CreateVaas(){
     return std::make_shared<Vaas>(getRandomPosition(), giveName(NPCType::VaasMontenegro, Vaas::getCount()));

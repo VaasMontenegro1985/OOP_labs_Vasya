@@ -26,8 +26,6 @@ std::shared_ptr<NPC> FactoryFile::createNPCFromFile(){
     file >> typeNumeric;
     file >> coordX;
     file >> coordY;
-    file >> name;
-
     NPCType type = NPCType(typeNumeric);
     Point<int> coordinates(coordX, coordY);
     file.get(); 

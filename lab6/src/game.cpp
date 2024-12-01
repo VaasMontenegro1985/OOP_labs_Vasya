@@ -18,15 +18,18 @@ Game::NPCSet Game::battle_step(double killDistance){
     return killed;
 }
 Game::Game(std::size_t width, std::size_t height) : mapWidth{width}, mapHeight{height}{
-
+    screenOut = std::make_shared<ObserverStdout>();
+    fileOut = std::make_shared<ObserverFile>("log.txt");
 };
 void Game::init(std::size_t quantity){
+
     units.clear();
 
     FactoryRandom factory(mapWidth, mapHeight);
-
     for (int i = 0; i < quantity; i++){
         auto npc = factory.CreateRandomNPC();
+        npc->subscribe(screenOut);
+        npc->subscribe(fileOut);
         units.insert(npc);
     }
 };
@@ -44,11 +47,14 @@ void Game::loadState(std::string filename){
 
     while (!factory.endOfFile()){
         auto npc = factory.createNPCFromFile();
+        
+        npc->subscribe(screenOut);
+        npc->subscribe(fileOut);
         units.insert(npc);
     }
 };
 void Game::battle(double distanceBegin, double distanceEnd, double distanceStep){
-    for (double killDistance = distanceBegin; killDistance < distanceEnd; killDistance + distanceStep){
+    for (double killDistance = distanceBegin; killDistance < distanceEnd; killDistance += distanceStep){
         std::cout << "=====FIGHT CYCLE=====" << std::endl;
         std::cout << "Kill distance: " << killDistance << std::endl << std::endl;
 

@@ -261,4 +261,10 @@ CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.o: \
  /usr/local/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  /usr/local/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  /workspaces/OOP_labs_Vasya/lab6/src/../include/utils.h \
- /workspaces/OOP_labs_Vasya/lab6/src/../include/concepts.h
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/concepts.h \
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/Observer.h \
+ /usr/local/include/c++/14.2.0/list \
+ /usr/local/include/c++/14.2.0/bits/stl_list.h \
+ /usr/local/include/c++/14.2.0/bits/list.tcc \
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/buck.h \
+ /workspaces/OOP_labs_Vasya/lab6/src/../include/jason.h

@@ -22,9 +22,9 @@ class FactoryRandom {
         std::string giveName(NPCType type, std::size_t countOfNPCType);
 
         public:
-            std::vector<std::string> namesJasonPush();
-            std::vector<std::string> namesBuckPush();
-            std::vector<std::string> namesVaasPush();
+            void namesJasonPush();
+            void namesBuckPush();
+            void namesVaasPush();
             FactoryRandom(std::size_t width, std::size_t height);
 
             std::shared_ptr<NPC> CreateVaas();

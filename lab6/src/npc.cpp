@@ -1,4 +1,5 @@
 #include "../include/npc.h"
+#include "../include/Observer.h"
 #include <stdexcept>
 
 std::set<std::string> NPC::usedNames;
@@ -15,11 +16,7 @@ NPC::NPC(NPCType t, std::string nameNPC, Point<int> coords){
 NPC::~NPC() {
     if (name != "") usedNames.erase(name);
 }
-// NPC::NPC(NpcType t, std::istream &is);
-
-// void subscribe(std::shared_ptr<IFightObserver>observer );
-// void fight_notify(const std::shared_ptr<NPC> defender,bool win);
-std::string NPC::getName (){
+std::string NPC::getName() const{
     return name;
 };
 Point<int> NPC::getCoords (){
@@ -29,6 +26,9 @@ NPCType NPC::getType (){
     return type;
 };
 
+void NPC::fightNotify(std::string victimName, bool win){
+    notifySubs(Murder(getName(), victimName, win));
+};
 bool NPC::isClose(const std::shared_ptr<NPC> &other, double distance) const {  
     if (((other->coordinates - coordinates).abs()) <= distance)
         return true;
@@ -41,25 +41,3 @@ std::ostream &operator<<(std::ostream &os, NPC &npc){
 };
 
 
-
-/*
-
-void NPC::subscribe(std::shared_ptr<IFightObserver> observer)
-{
-   observers.push_back(observer);
-}
-
-void NPC::fight_notify(const std::shared_ptr<NPC> defender, bool win)
-{
-    for (auto &o : observers)
-        o->on_fight(shared_from_this(), defender, win);
-}
-
-bool NPC::is_close(const std::shared_ptr<NPC> &other, size_t distance) const
-{
-    if (std::pow(x - other->x, 2) + std::pow(y - other->y, 2) <= std::pow(distance, 2))
-        return true;
-    else
-        return false;
-}
-*/

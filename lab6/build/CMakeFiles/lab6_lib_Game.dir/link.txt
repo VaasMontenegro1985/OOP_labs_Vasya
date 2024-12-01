@@ -1,2 +1,2 @@
-/usr/bin/ar qc liblab6_lib_Game.a CMakeFiles/lab6_lib_Game.dir/src/Game.cpp.o
-/usr/bin/ranlib liblab6_lib_Game.a
+/usr/bin/ar qc liblab6_lib_game.a CMakeFiles/lab6_lib_game.dir/src/game.cpp.o
+/usr/bin/ranlib liblab6_lib_game.a
