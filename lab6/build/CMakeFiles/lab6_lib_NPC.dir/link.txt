@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab6_lib_NPC.a CMakeFiles/lab6_lib_NPC.dir/src/NPC.cpp.o
+/usr/bin/ranlib liblab6_lib_NPC.a
