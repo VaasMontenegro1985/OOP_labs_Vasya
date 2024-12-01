@@ -17,7 +17,7 @@ bool FactoryFile::endOfFile(){
     return readCount >= inFileCount;
 }
 
-std::shared_ptr<NPC> FactoryFile::createNPCfromFile(){
+std::shared_ptr<NPC> FactoryFile::createNPCFromFile(){
     if (endOfFile()) throw std::logic_error("End of file reached.");
 
     int typeNumeric, coordX, coordY;

@@ -4,10 +4,10 @@
 class Jason : public NPC
 {   
     private:
-        size_t count;
+        static std::size_t count;
     public:
         Jason(Point<int> coords, std::string name);
-        size_t getCount();
+        static std::size_t getCount();
         bool fight(const Vaas &other) override;
         bool fight(const Buck &other) override;
         bool fight(const Jason &other) override;

@@ -1,5 +1,7 @@
 #include "../include/jason.h"
 
+std::size_t Jason::count = 0;
+
 Jason::Jason(Point<int> coords, std::string name) : NPC(NPCType::JasonBrody, name, coords) {   
     count++;
 }

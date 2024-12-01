@@ -293,8 +293,11 @@ CMakeFiles/lab6_lib_FactoryRandom.dir/src/factories/FactoryRandom.cpp.o: /worksp
   /usr/local/include/c++/14.2.0/vector \
   /usr/local/include/c++/14.2.0/bits/stl_vector.h \
   /usr/local/include/c++/14.2.0/bits/stl_bvector.h \
-  /usr/local/include/c++/14.2.0/bits/vector.tcc
+  /usr/local/include/c++/14.2.0/bits/vector.tcc \
+  /workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryFile.h
 
+
+/workspaces/OOP_labs_Vasya/lab6/include/factories/FactoryFile.h:
 
 /usr/local/include/c++/14.2.0/bits/vector.tcc:
 

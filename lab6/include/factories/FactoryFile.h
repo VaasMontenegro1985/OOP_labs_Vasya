@@ -16,7 +16,7 @@ public:
     ~FactoryFile();
 
     bool endOfFile();
-    std::shared_ptr<NPC> createNPCfromFile(){};
+    std::shared_ptr<NPC> createNPCFromFile();
     
     class NPCSaver { 
             private: 

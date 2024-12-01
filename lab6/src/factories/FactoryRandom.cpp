@@ -1,7 +1,8 @@
 #include "../../include/factories/FactoryRandom.h"
+#include "../../include/factories/FactoryFile.h"
 #include <stdexcept>
 
-std::vector<std::string> FactoryRandom::namesVaas(){
+std::vector<std::string> FactoryRandom::namesVaasPush(){
     std::vector<std::string> namesVaasVector;
     std::ifstream inputFile("../../unicNames/vaas.txt");
 
@@ -15,7 +16,7 @@ std::vector<std::string> FactoryRandom::namesVaas(){
     return namesVaasVector;
 }
 
-std::vector<std::string> FactoryRandom::namesJason(){
+std::vector<std::string> FactoryRandom::namesJasonPush(){
     std::vector<std::string> namesJasonVector;
     std::ifstream inputFile("../../unicNames/jason.txt");
 
@@ -29,7 +30,7 @@ std::vector<std::string> FactoryRandom::namesJason(){
     return namesJasonVector;
 }
 
-std::vector<std::string> FactoryRandom::namesBuck(){
+std::vector<std::string> FactoryRandom::namesBuckPush(){
     std::vector<std::string> namesBuckVector;
     std::ifstream inputFile("../../unicNames/buck.txt");
 
@@ -69,15 +70,15 @@ std::string FactoryRandom::giveName(NPCType type, std::size_t countOfNPCType){
 FactoryRandom::FactoryRandom(std::size_t width, std::size_t height) : mapWidth{width}, mapHeight{height}{}
 
 std::shared_ptr<NPC> FactoryRandom::CreateVaas(){
-    return new Vaas(getRandomPosition(), giveName(NPCType::VaasMontenegro, Vaas::getCount()));
+    return std::make_shared<Vaas>(getRandomPosition(), giveName(NPCType::VaasMontenegro, Vaas::getCount()));
 }
 
 std::shared_ptr<NPC> FactoryRandom::CreateJason(){
-    return new Jason(getRandomPosition(), giveName(NPCType::JasonBrody, Jason::getCount()));
+    return std::make_shared<Jason>(getRandomPosition(), giveName(NPCType::JasonBrody, Jason::getCount()));
 }
 
 std::shared_ptr<NPC> FactoryRandom::CreateBuck(){
-    return new Buck(getRandomPosition(), giveName(NPCType::BuckHughes, Buck::getCount()));
+    return std::make_shared<Buck>(getRandomPosition(), giveName(NPCType::BuckHughes, Buck::getCount()));
 }
 
 std::shared_ptr<NPC> FactoryRandom::CreateNPC (NPCType type){

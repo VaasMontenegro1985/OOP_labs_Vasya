@@ -371,7 +371,7 @@ lab6_lib_FactoryFile_LIB_DEPENDS:STATIC=general;lab6_lib_utils;general;lab6_lib_
 lab6_lib_FactoryRandom_LIB_DEPENDS:STATIC=general;lab6_lib_utils;general;lab6_lib_NPC;general;lab6_lib_vaas;general;lab6_lib_jason;general;lab6_lib_buck;
 
 //Dependencies for the target
-lab6_lib_Game_LIB_DEPENDS:STATIC=general;lab6_lib_utils;general;lab6_lib_NPC;general;lab6_lib_vaas;general;lab6_lib_jason;general;lab6_lib_buck;general;lab6_lib_FactoryRandom;general;lab6_lib_FactoryFile;general;lab6_lib_ObserverStdout;general;lab6_lib_ObserverFile;
+lab6_lib_Game_LIB_DEPENDS:STATIC=general;lab6_lib_utils;general;lab6_lib_NPC;general;lab6_lib_vaas;general;lab6_lib_jason;general;lab6_lib_buck;general;lab6_lib_FactoryRandom;general;lab6_lib_FactoryFile;
 
 //Dependencies for the target
 lab6_lib_NPC_LIB_DEPENDS:STATIC=general;lab6_lib_utils;

@@ -73,8 +73,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAM
 target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_buck)
 target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_FactoryRandom)
 target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_FactoryFile)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverStdout)
-target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverFile)
+# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverStdout)
+# target_link_libraries(${CMAKE_PROJECT_NAME}_lib_Game PRIVATE ${CMAKE_PROJECT_NAME}_lib_ObserverFile)
 
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib_Game)
 

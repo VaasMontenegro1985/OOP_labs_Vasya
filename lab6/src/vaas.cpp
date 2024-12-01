@@ -1,5 +1,6 @@
 #include "../include/vaas.h"
 
+std::size_t Vaas::count = 0; 
 Vaas::Vaas (Point<int> coords, std::string name) : NPC(NPCType::VaasMontenegro, name, coords) {
    count++;
 }

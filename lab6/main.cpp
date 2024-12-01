@@ -3,27 +3,35 @@
 #include "include/NPC.h" 
 #include "include/vaas.h" 
 #include "include/buck.h" 
-#include "include/jason.h" 
+#include "include/jason.h"
+#include <chrono> 
+#include <cstdlib> 
+#include "include/Game.h" 
  
 int main () { 
-    std::shared_ptr<NPC> jason{new Jason(Point(0, 0), "American")}; 
-    std::shared_ptr<NPC> buck{new Buck(Point(20, 10), "Horny")}; 
-    std::shared_ptr<NPC> vaas{new Vaas(Point(30, 40), "Drunk")}; 
- 
-    std::cout << *jason << std::endl; 
-    std::cout << jason->accept(jason) << std::endl; 
-    std::cout << buck->accept(jason) << std::endl; 
-    std::cout << vaas->accept(jason) << std::endl; 
+    unsigned int seed = std::chrono::system_clock::now().time_since_epoch().count(); 
+    std::srand(seed); 
      
-    std::cout << *buck << std::endl; 
-    std::cout << jason->accept(buck) << std::endl; 
-    std::cout << buck->accept(buck) << std::endl; 
-    std::cout << vaas->accept(buck) << std::endl; 
+    Game game(100, 50); 
  
-    std::cout << *vaas << std::endl; 
-    std::cout << jason->accept(vaas) << std::endl; 
-    std::cout << buck->accept(vaas) << std::endl; 
-    std::cout << vaas->accept(vaas) << std::endl; 
+    std::cout << "Initialization..." << std::endl; 
+    game.init(20); 
+ 
+    std::cout << "Saving..." << std::endl; 
+    game.saveState("file.txt"); 
+ 
+    std::cout << "Loading..." << std::endl; 
+    game.loadState("file.txt"); 
+ 
+    std::cout << "Initial state: " << std::endl; 
+    std::cout << game << std::endl; 
+ 
+    std::cout << std::endl << "===== FIGHT =====" << std::endl << std::endl; 
+    game.battle(10.0, 50.0, 5.0); 
+ 
+    std::cout << std::endl << "===== FIGHT END =====" << std::endl << std::endl; 
+    std::cout << "Survivors:" << std::endl; 
+    std::cout << game << std::endl; 
  
     return 0; 
 }

@@ -1,6 +1,6 @@
 #include "../include/game.h"
-#include "../../include/factories/FactoryRandom.h"
-#include "../../include/factories/FactoryFile.h"
+#include "../include/factories/FactoryRandom.h"
+#include "../include/factories/FactoryFile.h"
 #include <iostream>
 
 Game::NPCSet Game::battle_step(double killDistance){
@@ -43,7 +43,7 @@ void Game::loadState(std::string filename){
     FactoryFile factory(filename);
 
     while (!factory.endOfFile()){
-        auto npc = factory.CreateNPCFromFile();
+        auto npc = factory.createNPCFromFile();
         units.insert(npc);
     }
 };
@@ -54,7 +54,7 @@ void Game::battle(double distanceBegin, double distanceEnd, double distanceStep)
 
         auto killed = battle_step(killDistance);
 
-        for (auto &npc : killed){ units.erase(npc)};
+        for (auto &npc : killed){ units.erase(npc);};
     
         std::cout << std::endl;
     }

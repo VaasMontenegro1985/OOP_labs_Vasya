@@ -1,5 +1,7 @@
 #include "../include/buck.h" 
 
+std::size_t Buck::count = 0;
+
 Buck::Buck (Point<int> coords, std::string name) : NPC(NPCType::BuckHughes, name, coords){
       count++;
 }
