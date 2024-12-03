@@ -40,7 +40,7 @@ void FactoryRandom::namesBuckPush(){
 
 Point<int> FactoryRandom::getRandomPosition(){
     int coordX = std::rand() % mapWidth;
-    int coordY = std::rand() % mapWidth;
+    int coordY = std::rand() % mapHeight;
     return Point(coordX, coordY);
 }
 

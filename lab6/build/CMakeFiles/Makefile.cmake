@@ -88,6 +88,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lab6_lib_ObserverFile.dir/DependInfo.cmake"
   "CMakeFiles/lab6_lib_game.dir/DependInfo.cmake"
   "CMakeFiles/lab6_exe.dir/DependInfo.cmake"
+  "CMakeFiles/tests.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

@@ -74,6 +74,7 @@ all: CMakeFiles/lab6_lib_ObserverStdout.dir/all
 all: CMakeFiles/lab6_lib_ObserverFile.dir/all
 all: CMakeFiles/lab6_lib_game.dir/all
 all: CMakeFiles/lab6_exe.dir/all
+all: CMakeFiles/tests.dir/all
 all: _deps/googletest-build/all
 .PHONY : all
 
@@ -93,6 +94,7 @@ clean: CMakeFiles/lab6_lib_ObserverStdout.dir/clean
 clean: CMakeFiles/lab6_lib_ObserverFile.dir/clean
 clean: CMakeFiles/lab6_lib_game.dir/clean
 clean: CMakeFiles/lab6_exe.dir/clean
+clean: CMakeFiles/tests.dir/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
 
@@ -462,6 +464,40 @@ lab6_exe: CMakeFiles/lab6_exe.dir/rule
 CMakeFiles/lab6_exe.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_exe.dir/build.make CMakeFiles/lab6_exe.dir/clean
 .PHONY : CMakeFiles/lab6_exe.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests.dir
+
+# All Build rule for target.
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_utils.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_NPC.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_vaas.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_jason.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_buck.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_FactoryRandom.dir/all
+CMakeFiles/tests.dir/all: CMakeFiles/lab6_lib_FactoryFile.dir/all
+CMakeFiles/tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/OOP_labs_Vasya/lab6/build/CMakeFiles --progress-num=31,32 "Built target tests"
+.PHONY : CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/OOP_labs_Vasya/lab6/build/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/OOP_labs_Vasya/lab6/build/CMakeFiles 0
+.PHONY : CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# clean rule for target.
+CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
+.PHONY : CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir

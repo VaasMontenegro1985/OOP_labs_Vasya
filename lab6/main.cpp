@@ -27,7 +27,7 @@ int main () {
     std::cout << game << std::endl; 
  
     std::cout << std::endl << "===== FIGHT =====" << std::endl << std::endl; 
-    game.battle(10.0, 500.0, 20.0); 
+    game.battle(10.0, 750.0, 100.0); 
  
     std::cout << std::endl << "===== FIGHT END =====" << std::endl << std::endl; 
     std::cout << "Survivors:" << std::endl; 

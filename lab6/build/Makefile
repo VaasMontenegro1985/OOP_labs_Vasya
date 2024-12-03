@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /workspaces/OOP_labs_Vasya/lab6/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -303,6 +313,19 @@ lab6_exe: cmake_check_build_system
 lab6_exe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_exe.dir/build.make CMakeFiles/lab6_exe.dir/build
 .PHONY : lab6_exe/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -620,6 +643,30 @@ src/vaas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_lib_vaas.dir/build.make CMakeFiles/lab6_lib_vaas.dir/src/vaas.cpp.s
 .PHONY : src/vaas.cpp.s
 
+test/test.o: test/test.cpp.o
+.PHONY : test/test.o
+
+# target to build an object file
+test/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test/test.cpp.o
+.PHONY : test/test.cpp.o
+
+test/test.i: test/test.cpp.i
+.PHONY : test/test.i
+
+# target to preprocess a source file
+test/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test/test.cpp.i
+.PHONY : test/test.cpp.i
+
+test/test.s: test/test.cpp.s
+.PHONY : test/test.s
+
+# target to generate assembly for a file
+test/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test/test.cpp.s
+.PHONY : test/test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -632,6 +679,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -647,6 +695,7 @@ help:
 	@echo "... lab6_lib_jason"
 	@echo "... lab6_lib_utils"
 	@echo "... lab6_lib_vaas"
+	@echo "... tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -680,6 +729,9 @@ help:
 	@echo "... src/vaas.o"
 	@echo "... src/vaas.i"
 	@echo "... src/vaas.s"
+	@echo "... test/test.o"
+	@echo "... test/test.i"
+	@echo "... test/test.s"
 .PHONY : help
 
 
