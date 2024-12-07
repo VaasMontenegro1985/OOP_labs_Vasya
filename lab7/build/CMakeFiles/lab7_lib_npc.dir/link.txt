@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab7_lib_npc.a CMakeFiles/lab7_lib_npc.dir/src/npc.cpp.o
+/usr/bin/ranlib liblab7_lib_npc.a

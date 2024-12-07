@@ -1,0 +1,201 @@
+50
+2
+6
+7
+Resourceful Jason
+1
+13
+3
+Monster Vaas
+2
+8
+7
+Tenacious Jason
+2
+21
+2
+Resilient Jason
+1
+2
+6
+Insane Vaas
+1
+0
+7
+Evil Vaas
+3
+25
+9
+Deer Buck
+1
+18
+6
+Red Vaas
+2
+22
+7
+Brave Jason
+3
+52
+8
+Horhy Buck
+3
+7
+4
+Cunning Buck
+1
+8
+0
+Crazy Vaas
+2
+62
+0
+Daring Jason
+1
+5
+2
+Michael Vaas
+2
+1
+6
+Adventurous Jason
+1
+69
+6
+RookIslander Vaas
+3
+17
+3
+Australian Buck
+2
+35
+2
+Bold Jason
+3
+54
+6
+TatooRoses Buck
+3
+13
+0
+Gawaii Buck
+2
+46
+7
+Fearless Jason
+3
+7
+7
+Smiling Buck
+2
+42
+2
+Determined Jason
+1
+65
+9
+Alive Vaas
+3
+1
+0
+Rugged Buck
+1
+13
+1
+Psycopath Vaas
+3
+4
+8
+Weathered Buck
+1
+25
+3
+Lunatic Vaas
+1
+25
+9
+Drugdiller Vaas
+2
+61
+5
+Persistent Jason
+2
+66
+1
+Relentless Jason
+2
+45
+0
+Sturdy Jason
+1
+48
+3
+GangBoss Vaas
+1
+59
+0
+Leader Vaas
+1
+55
+1
+HumanTrafficker Vaas
+2
+24
+6
+Robust Jason
+2
+62
+3
+Vigorous Jason
+2
+66
+0
+Dynamic Jason
+2
+41
+5
+Energetic Jason
+1
+23
+7
+Pirate Vaas
+1
+28
+3
+Smuggler Vaas
+2
+41
+0
+Spirited Jason
+2
+24
+8
+Passionate Jason
+3
+38
+9
+Grizzled Buck
+1
+44
+4
+Lover1911 Vaas
+3
+31
+1
+Stoic Buck
+1
+9
+5
+OwnerDLC Vaas
+2
+7
+1
+Fierce Jason
+2
+49
+3
+Ferocious Jason
+1
+3
+8
+Cute Vaas
