@@ -51,7 +51,7 @@ class NPC : public Observable<Murder>{
 
     public: 
         NPC (NPCType type, std::string name, Point<int> coords, std::size_t move, std::size_t kill, char npcSprite); 
-        virtual void move(std::size_t mapHeight, std::size_t mapWidth);     
+        virtual void move(std::size_t mapWidth, std::size_t mapHeight);     
 
         virtual ~NPC (); 
         std::string getName() const;

@@ -26,7 +26,7 @@ std::string NPC::getName() const{
     return name;
 };
 Point<int> NPC::getCoords (){
-    std::shared_lock<std::shared_mutex> (mtx);
+    std::shared_lock<std::shared_mutex> lock(mtx);
     return coordinates;
 };
 NPCType NPC::getType (){
@@ -42,7 +42,7 @@ std::size_t  NPC::getKillDistance(){
     return killDistance;
 };
 
-void NPC::move(std::size_t mapHeight, std::size_t mapWidth){
+void NPC::move(std::size_t mapWidth, std::size_t mapHeight){
    std::lock_guard<std::shared_mutex> lock(mtx);
 
    for (std::size_t i = 0; i < getMoveDistance(); i++){

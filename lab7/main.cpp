@@ -8,7 +8,7 @@
 #include <chrono> 
 #include <cstdlib> 
 using namespace std::chrono_literals;
-const std::size_t mapWidth(70);
+const std::size_t mapWidth(50);
 const std::size_t mapHeight(10);
 const std::size_t quantityNpc(50);
 int main () { 
