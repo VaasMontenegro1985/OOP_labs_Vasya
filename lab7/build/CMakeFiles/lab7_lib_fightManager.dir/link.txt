@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab7_lib_fightManager.a CMakeFiles/lab7_lib_fightManager.dir/src/fightManager.cpp.o
+/usr/bin/ranlib liblab7_lib_fightManager.a

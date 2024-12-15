@@ -1,0 +1,45 @@
+# Query: fightNotify
+
+22 results - 10 files
+
+lab6/include/npc.h:
+  44:     void fightNotify(std::string nameVictim, bool win);
+
+lab6/src/buck.cpp:
+  14:    fightNotify(other.getName(), false);
+  19:    fightNotify(other.getName(), false);
+  24:    fightNotify(other.getName(), false);
+
+lab6/src/jason.cpp:
+  14:     fightNotify(other.getName(), false);
+  19:     fightNotify(other.getName(), false);
+  24:     fightNotify(other.getName(), true);
+
+lab6/src/npc.cpp:
+  29: void NPC::fightNotify(std::string victimName, bool win){
+
+lab6/src/vaas.cpp:
+  13:    fightNotify(other.getName(), true);
+  18:    fightNotify(other.getName(), true);
+  23:    fightNotify(other.getName(), false);
+
+lab7/include/npc.h:
+  50:     void fightNotify(std::string nameVictim, bool win);
+
+lab7/src/buck.cpp:
+  14:    fightNotify(other.getName(), false);
+  19:    fightNotify(other.getName(), false);
+  24:    fightNotify(other.getName(), false);
+
+lab7/src/jason.cpp:
+  14:     fightNotify(other.getName(), false);
+  19:     fightNotify(other.getName(), false);
+  24:     fightNotify(other.getName(), true);
+
+lab7/src/npc.cpp:
+  64: void NPC::fightNotify(std::string victimName, bool win){
+
+lab7/src/vaas.cpp:
+  13:    fightNotify(other.getName(), true);
+  18:    fightNotify(other.getName(), true);
+  23:    fightNotify(other.getName(), false);

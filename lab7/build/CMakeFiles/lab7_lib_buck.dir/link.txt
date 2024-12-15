@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab7_lib_buck.a CMakeFiles/lab7_lib_buck.dir/src/buck.cpp.o
+/usr/bin/ranlib liblab7_lib_buck.a

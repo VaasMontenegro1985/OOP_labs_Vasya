@@ -1,0 +1,201 @@
+50
+1
+10
+8
+Monster Vaas
+1
+20
+8
+Insane Vaas
+3
+23
+9
+Deer Buck
+3
+12
+8
+Horhy Buck
+2
+32
+1
+Resourceful Jason
+3
+16
+6
+Cunning Buck
+2
+37
+8
+Tenacious Jason
+3
+26
+7
+Australian Buck
+3
+24
+4
+TatooRoses Buck
+1
+0
+1
+Evil Vaas
+2
+23
+1
+Resilient Jason
+3
+36
+3
+Gawaii Buck
+2
+6
+6
+Brave Jason
+2
+20
+1
+Daring Jason
+1
+29
+3
+Red Vaas
+1
+37
+1
+Crazy Vaas
+3
+39
+1
+Smiling Buck
+1
+0
+7
+Michael Vaas
+2
+22
+1
+Adventurous Jason
+3
+5
+4
+Rugged Buck
+3
+14
+7
+Weathered Buck
+1
+11
+5
+RookIslander Vaas
+3
+18
+3
+Grizzled Buck
+1
+16
+4
+Alive Vaas
+1
+14
+5
+Psycopath Vaas
+2
+33
+2
+Bold Jason
+1
+20
+4
+Lunatic Vaas
+2
+7
+4
+Fearless Jason
+3
+20
+6
+Stoic Buck
+2
+10
+4
+Determined Jason
+3
+0
+8
+Wiry Buck
+3
+4
+1
+Tough Buck
+1
+44
+1
+Drugdiller Vaas
+3
+42
+9
+Hardened Buck
+1
+11
+5
+GangBoss Vaas
+3
+35
+0
+Experienced Buck
+3
+30
+2
+Battle-tested Buck
+3
+37
+9
+Weather-beaten Buck
+3
+31
+0
+Rough Buck
+3
+40
+2
+Crusty Buck
+1
+14
+2
+Leader Vaas
+1
+27
+9
+HumanTrafficker Vaas
+2
+15
+5
+Persistent Jason
+1
+39
+7
+Pirate Vaas
+2
+19
+0
+Relentless Jason
+2
+35
+5
+Sturdy Jason
+2
+23
+5
+Robust Jason
+1
+27
+2
+Smuggler Vaas
+1
+45
+5
+Lover1911 Vaas
+3
+1
+6
+No-nonsense Buck

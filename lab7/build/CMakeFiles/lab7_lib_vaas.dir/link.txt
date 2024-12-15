@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab7_lib_vaas.a CMakeFiles/lab7_lib_vaas.dir/src/vaas.cpp.o
+/usr/bin/ranlib liblab7_lib_vaas.a

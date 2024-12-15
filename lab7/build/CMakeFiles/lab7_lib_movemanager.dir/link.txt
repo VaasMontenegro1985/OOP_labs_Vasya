@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblab7_lib_movemanager.a CMakeFiles/lab7_lib_movemanager.dir/src/movemanager.cpp.o
+/usr/bin/ranlib liblab7_lib_movemanager.a
