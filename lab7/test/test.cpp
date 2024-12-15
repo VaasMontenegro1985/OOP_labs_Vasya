@@ -209,7 +209,7 @@ TEST(Npc, enough_close) {
 
 TEST(Npc, not_enough_close) {
     Vaas vaas1(Point(1, 2), "vaas1");
-    std::shared_ptr<Vaas> vaas2 = std::make_shared<Vaas>(Point(6, 5), "vaas2");
+    std::shared_ptr<Vaas> vaas2 = std::make_shared<Vaas>(Point(60, 50), "vaas2");
     
     bool result = vaas1.isClose(vaas2);
 

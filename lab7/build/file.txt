@@ -1,201 +1,201 @@
 50
 1
-49
-7
-Monster Vaas
-2
-41
+10
 8
-Resourceful Jason
+Monster Vaas
 1
-14
-6
+20
+8
 Insane Vaas
-2
-44
-4
-Tenacious Jason
-1
-15
-9
-Evil Vaas
-1
-31
-9
-Red Vaas
 3
+23
 9
-1
 Deer Buck
 3
-21
-0
+12
+8
 Horhy Buck
 2
-37
-9
-Resilient Jason
-2
-29
-2
-Brave Jason
+32
 1
-19
+Resourceful Jason
 3
-Crazy Vaas
-1
-29
+16
 6
-Michael Vaas
-1
-39
-0
-RookIslander Vaas
-2
-23
-7
-Daring Jason
-1
-35
-4
-Alive Vaas
-3
-30
-5
 Cunning Buck
-1
-19
-4
-Psycopath Vaas
+2
+37
+8
+Tenacious Jason
 3
-4
+26
 7
 Australian Buck
 3
-2
-6
+24
+4
 TatooRoses Buck
+1
+0
+1
+Evil Vaas
 2
-34
-6
-Adventurous Jason
-2
-8
-5
-Bold Jason
+23
+1
+Resilient Jason
 3
-2
-7
+36
+3
 Gawaii Buck
-1
-11
+2
 6
-Lunatic Vaas
+6
+Brave Jason
 2
-21
-2
-Fearless Jason
+20
 1
-13
-9
-Drugdiller Vaas
+Daring Jason
 1
-26
-1
-GangBoss Vaas
+29
 3
-28
-2
+Red Vaas
+1
+37
+1
+Crazy Vaas
+3
+39
+1
 Smiling Buck
 1
-21
-6
-Leader Vaas
+0
+7
+Michael Vaas
 2
-46
+22
 1
-Determined Jason
-1
+Adventurous Jason
 3
-7
-HumanTrafficker Vaas
-1
-43
 5
-Pirate Vaas
-3
-15
-7
+4
 Rugged Buck
+3
+14
+7
+Weathered Buck
+1
+11
+5
+RookIslander Vaas
+3
+18
+3
+Grizzled Buck
+1
+16
+4
+Alive Vaas
 1
 14
-1
-Smuggler Vaas
-2
-6
-2
-Persistent Jason
-2
-35
-7
-Relentless Jason
-2
-16
-3
-Sturdy Jason
-3
-34
-3
-Weathered Buck
-2
-49
-4
-Robust Jason
+5
+Psycopath Vaas
 2
 33
 2
-Vigorous Jason
+Bold Jason
 1
-21
-5
-Lover1911 Vaas
+20
+4
+Lunatic Vaas
+2
+7
+4
+Fearless Jason
 3
-48
-9
-Grizzled Buck
-3
-30
+20
 6
 Stoic Buck
 2
-1
-0
-Dynamic Jason
-2
-0
-9
-Energetic Jason
-1
-2
+10
 4
-OwnerDLC Vaas
-2
-45
+Determined Jason
 3
-Spirited Jason
-3
-11
-9
-Wiry Buck
-1
-18
 0
-Cute Vaas
-2
-26
+8
+Wiry Buck
 3
-Passionate Jason
+4
+1
+Tough Buck
+1
+44
+1
+Drugdiller Vaas
+3
+42
+9
+Hardened Buck
+1
+11
+5
+GangBoss Vaas
+3
+35
+0
+Experienced Buck
+3
+30
 2
-34
+Battle-tested Buck
+3
+37
+9
+Weather-beaten Buck
+3
+31
+0
+Rough Buck
+3
+40
+2
+Crusty Buck
+1
+14
+2
+Leader Vaas
+1
+27
+9
+HumanTrafficker Vaas
+2
+15
+5
+Persistent Jason
+1
+39
 7
-Fierce Jason
+Pirate Vaas
+2
+19
+0
+Relentless Jason
+2
+35
+5
+Sturdy Jason
+2
+23
+5
+Robust Jason
+1
+27
+2
+Smuggler Vaas
+1
+45
+5
+Lover1911 Vaas
+3
+1
+6
+No-nonsense Buck
